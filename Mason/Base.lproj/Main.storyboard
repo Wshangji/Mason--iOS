@@ -13,12 +13,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Login">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9Z-SxJ">
-                                <rect key="frame" x="55" y="310" width="304" height="234"/>
+                                <rect key="frame" x="55" y="279.5" width="304" height="264.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-bP-RQ8">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="34"/>
@@ -30,23 +30,26 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-Aw-O6L">
-                                        <rect key="frame" x="134.5" y="108" width="35.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCz-Aw-O6L">
+                                        <rect key="frame" x="127" y="108" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-ex-pHb">
-                                        <rect key="frame" x="0.0" y="147.5" width="304" height="35.5"/>
+                                        <rect key="frame" x="0.0" y="178" width="304" height="35.5"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="f0F-5x-LCA" kind="presentation" identifier="LoginSuccess" modalPresentationStyle="fullScreen" id="a4H-Fz-VK6"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9g-qv-ADO">
-                                        <rect key="frame" x="73" y="203" width="158" height="31"/>
+                                        <rect key="frame" x="73" y="233.5" width="158" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有账号？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ0-lk-9UI">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.5" height="31"/>
@@ -59,7 +62,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="现在注册"/>
                                                 <connections>
-                                                    <segue destination="mg8-OS-l9j" kind="show" id="cRK-Eh-FgY"/>
+                                                    <segue destination="mg8-OS-l9j" kind="show" identifier="Regester" id="cRK-Eh-FgY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -84,6 +87,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="OS8-pF-2GF"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="gCz-Aw-O6L" id="9bo-1o-YNm"/>
+                        <outlet property="passwordTextField" destination="x2Y-iw-fr8" id="Qub-AD-eLY"/>
+                        <outlet property="usernameTextField" destination="2c4-bP-RQ8" id="H5x-b8-8jI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +101,7 @@
         <scene sceneID="Va6-uP-Kcc">
             <objects>
                 <viewController title="RegisterVC" id="mg8-OS-l9j" customClass="RegisterViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OlA-24-8wW">
+                    <view key="view" contentMode="scaleToFill" id="OlA-24-8wW" customClass="Register">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -151,6 +159,9 @@
                                                 <rect key="frame" x="138" y="0.0" width="110" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="《注册协议》"/>
+                                                <connections>
+                                                    <segue destination="ZZO-oe-eGQ" kind="presentation" id="MII-KJ-AUz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -183,10 +194,25 @@
             </objects>
             <point key="canvasLocation" x="1387" y="469"/>
         </scene>
+        <!--ContentVC-->
+        <scene sceneID="v55-vB-I27">
+            <objects>
+                <viewController id="ZZO-oe-eGQ" customClass="ContentVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHC-HO-S0x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aKB-SQ-ya2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yh-LV-VDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2171" y="757"/>
+        </scene>
         <!--ConfirmeVC-->
         <scene sceneID="Uhv-Au-SQS">
             <objects>
-                <viewController title="ConfirmeVC" id="AZb-TM-nLX" customClass="RegisterViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ConfirmeVC" id="AZb-TM-nLX" customClass="ConfirmeViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pz0-3D-XPT" customClass="Confirmation">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +270,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsK-zr-3fj" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149" y="-120"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="HaX-pK-d6g">
+            <objects>
+                <viewController title="HomeVC" id="f0F-5x-LCA" customClass="HomeViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufL-Hj-nYL" customClass="Home">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="79N-tp-Pp5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orK-gy-2r7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1387" y="-346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cat-fX-msw">
