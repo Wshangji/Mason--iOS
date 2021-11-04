@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2C2733D2F600D36D20 /* awsconfiguration.json */; };
+		746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */; };
 		7476F11F27325E7800132908 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476F11E27325E7800132908 /* HomeViewController.swift */; };
 		7492A2C627319E7800DCFE27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492A2C527319E7800DCFE27 /* LoginViewController.swift */; };
 		7492A2C827319EA300DCFE27 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492A2C727319EA300DCFE27 /* RegisterViewController.swift */; };
@@ -20,6 +22,9 @@
 		749AF4662730D5BF00D32AEA /* MasonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4652730D5BF00D32AEA /* MasonTests.swift */; };
 		749AF4702730D5BF00D32AEA /* MasonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF46F2730D5BF00D32AEA /* MasonUITests.swift */; };
 		749AF4722730D5BF00D32AEA /* MasonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4712730D5BF00D32AEA /* MasonUITestsLaunchTests.swift */; };
+		BD3D923C788D1582DF9275AE /* Pods_Mason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66A923E9990545A325AB547 /* Pods_Mason.framework */; };
+		BE2C7AE6BAE0E2749B568E3D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1698652BFD727C984EED5559 /* awsconfiguration.json */; };
+		DDEA41FCA13E7A8D2FE3B25B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1698652BFD727C984EED5559 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		746C4D2C2733D2F600D36D20 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		7476F11E27325E7800132908 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7492A2C527319E7800DCFE27 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7492A2C727319EA300DCFE27 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +66,9 @@
 		749AF46B2730D5BF00D32AEA /* MasonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		749AF46F2730D5BF00D32AEA /* MasonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonUITests.swift; sourceTree = "<group>"; };
 		749AF4712730D5BF00D32AEA /* MasonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88C1AD27B84E3DA3385E73A8 /* Pods-Mason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mason.release.xcconfig"; path = "Target Support Files/Pods-Mason/Pods-Mason.release.xcconfig"; sourceTree = "<group>"; };
+		D1F35F0993A22FCE5222EBC1 /* Pods-Mason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mason.debug.xcconfig"; path = "Target Support Files/Pods-Mason/Pods-Mason.debug.xcconfig"; sourceTree = "<group>"; };
+		E66A923E9990545A325AB547 /* Pods_Mason.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mason.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3D923C788D1582DF9275AE /* Pods_Mason.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B7D932CB79D54FB50CF702C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E66A923E9990545A325AB547 /* Pods_Mason.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182C13D9E1980FDAD588698A /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1698652BFD727C984EED5559 /* awsconfiguration.json */,
+				2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		749AF4422730D5BE00D32AEA = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +121,9 @@
 				749AF4642730D5BF00D32AEA /* MasonTests */,
 				749AF46E2730D5BF00D32AEA /* MasonUITests */,
 				749AF44C2730D5BE00D32AEA /* Products */,
+				AD35FBA8BB0B24460D9E7008 /* Pods */,
+				0B7D932CB79D54FB50CF702C /* Frameworks */,
+				182C13D9E1980FDAD588698A /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +140,8 @@
 		749AF44D2730D5BE00D32AEA /* Mason */ = {
 			isa = PBXGroup;
 			children = (
+				746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */,
+				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
 				749AF44E2730D5BE00D32AEA /* AppDelegate.swift */,
 				749AF4502730D5BE00D32AEA /* SceneDelegate.swift */,
 				749AF4522730D5BE00D32AEA /* ViewController.swift */,
@@ -139,6 +174,15 @@
 			path = MasonUITests;
 			sourceTree = "<group>";
 		};
+		AD35FBA8BB0B24460D9E7008 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1F35F0993A22FCE5222EBC1 /* Pods-Mason.debug.xcconfig */,
+				88C1AD27B84E3DA3385E73A8 /* Pods-Mason.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 749AF4752730D5BF00D32AEA /* Build configuration list for PBXNativeTarget "Mason" */;
 			buildPhases = (
+				0C9F178424690B141381F6EF /* [CP] Check Pods Manifest.lock */,
 				749AF4472730D5BE00D32AEA /* Sources */,
 				749AF4482730D5BE00D32AEA /* Frameworks */,
 				749AF4492730D5BE00D32AEA /* Resources */,
+				39A11B3D7E1A0E3CAB7A56C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,7 +291,11 @@
 			files = (
 				749AF45B2730D5BF00D32AEA /* LaunchScreen.storyboard in Resources */,
 				749AF4582730D5BF00D32AEA /* Assets.xcassets in Resources */,
+				746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */,
+				746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */,
 				749AF4562730D5BE00D32AEA /* Main.storyboard in Resources */,
+				BE2C7AE6BAE0E2749B568E3D /* awsconfiguration.json in Resources */,
+				DDEA41FCA13E7A8D2FE3B25B /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +314,52 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C9F178424690B141381F6EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mason-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39A11B3D7E1A0E3CAB7A56C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		749AF4472730D5BE00D32AEA /* Sources */ = {
@@ -450,6 +546,7 @@
 		};
 		749AF4762730D5BF00D32AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F35F0993A22FCE5222EBC1 /* Pods-Mason.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +576,7 @@
 		};
 		749AF4772730D5BF00D32AEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C1AD27B84E3DA3385E73A8 /* Pods-Mason.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
