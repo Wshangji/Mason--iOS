@@ -26,13 +26,13 @@ class LoginViewController: UIViewController {
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
-        if identifier == "LoginSuccess" {
-            if username.isEmpty || password.isEmpty {
-                errorLabel.text = "请输入用户名或密码"
-                return false
-            }
-            errorLabel.text = ""
-        }
+//        if identifier == "LoginSuccess" {
+//            if username.isEmpty || password.isEmpty {
+//                errorLabel.text = "请输入用户名或密码"
+//                return false
+//            }
+//            errorLabel.text = ""
+//        }
         return true
     }
 

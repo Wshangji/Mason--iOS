@@ -10,6 +10,11 @@
       "StackName": "amplify-masonios-dev-163227",
       "StackId": "arn:aws:cloudformation:us-east-1:278463271169:stack/amplify-masonios-dev-163227/e7abb6a0-3d49-11ec-8e02-126085ec6785",
       "AmplifyAppId": "d3lq1jggllkyqy"
+    },
+    "categories": {
+      "auth": {
+        "masonios7ee5064f": {}
+      }
     }
   }
 }

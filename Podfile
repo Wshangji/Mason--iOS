@@ -4,4 +4,5 @@
 target 'Mason' do
   use_frameworks!
   pod 'Amplify'
+  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
 end
