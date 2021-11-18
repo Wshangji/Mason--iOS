@@ -7,6 +7,31 @@
 
 import UIKit
 import Amplify
+import AmplifyPlugins
+
+struct quesList {
+    static var ques1: String = "null"
+    static var ques2: String = "null"
+    static var ques3: String = "null"
+    static var ques4: String = "null"
+    static var ques5: String = "null"
+    static var ques6_1: String = "null"
+    static var ques6_2: String = "null"
+    static var ques7_1: String = "null"
+    static var ques7_2: String = "null"
+    static var ques7_3: String = "null"
+    static var ques7_4: String = "null"
+    static var ques8_1: String = "null"
+    static var ques8_2: String = "null"
+    static var ques8_3: String = "null"
+    static var ques8_4: String = "null"
+    static var ques8_5: String = "null"
+    static var ques9_1: String = "null"
+    static var ques9_2: String = "null"
+    static var ques9_3: String = "null"
+    static var ques9_4: String = "null"
+    static var ques9_5: String = "null"
+}
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         do {
-            Amplify.Logging.logLevel = .verbose
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: AWSAPIPlugin())
+            try Amplify.add(
+                plugin: AWSDataStorePlugin(modelRegistration: AmplifyModels())
+            )
             try Amplify.configure()
+            print("Amplify configured with auth plugin")
         } catch {
             print("An error occurred setting up Amplify: \(error)")
         }

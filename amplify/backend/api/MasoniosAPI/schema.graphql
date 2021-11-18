@@ -1,0 +1,58 @@
+type User
+    @model
+    @auth(
+         rules: [
+           { allow: owner, ownerField: "owner", operations: [create, update, read] },
+         ]) {
+    id: ID!
+    name: String
+    isAgree: Boolean
+}
+
+type Perception
+    @model
+    @auth(
+             rules: [
+               { allow: owner, ownerField: "owner", operations: [create, delete, update] },
+             ]) {
+    id: ID!
+    name: String
+    gender: String
+    race: String
+    ethnicity: String
+    ses: String
+    eigenstates: String
+    createdAt: AWSDateTime
+}
+
+type Questions
+    @model
+    @auth(
+                 rules: [
+                   { allow: owner, ownerField: "owner", operations: [create, delete, update] },
+                 ]) {
+    id: ID!
+    name: String!
+    pro1: String
+    pro2: String
+    pro3: String
+    pro4: String
+    pro5: String
+    pro6_1: String
+    pro6_2: String
+    pro7_1: String
+    pro7_2: String
+    pro7_3: String
+    pro7_4: String
+    pro8_1: String
+    pro8_2: String
+    pro8_3: String
+    pro8_4: String
+    pro8_5: String
+    pro9_1: String
+    pro9_2: String
+    pro9_3: String
+    pro9_4: String
+    pro9_5: String
+    updatedAt: AWSDateTime
+}

@@ -7,26 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0B314B73EBE3DF136B3312 /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D542921CF767CB7D3DA4181 /* User+Schema.swift */; };
+		567FBAE80AD2EED1F0D4E52E /* Perception.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A095FE13ADCA830366EEBD /* Perception.swift */; };
+		63BD69E62E51911CC569212A /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CFF169826CC4D23A714FC /* Questions.swift */; };
+		7457128B273E7F2000432F90 /* Ques3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128A273E7F2000432F90 /* Ques3ViewController.swift */; };
+		7457128D273E7F2C00432F90 /* Ques4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128C273E7F2C00432F90 /* Ques4ViewController.swift */; };
 		746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2C2733D2F600D36D20 /* awsconfiguration.json */; };
 		746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */; };
 		7476F11F27325E7800132908 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476F11E27325E7800132908 /* HomeViewController.swift */; };
 		74899E49273D7051000E3F1F /* PrequestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E48273D7051000E3F1F /* PrequestionController.swift */; };
 		74899E4D273D8571000E3F1F /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E4C273D8571000E3F1F /* TapBarController.swift */; };
+		74899E51273E386D000E3F1F /* Ques1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E50273E386D000E3F1F /* Ques1ViewController.swift */; };
+		74899E53273E3913000E3F1F /* Ques2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E52273E3913000E3F1F /* Ques2ViewController.swift */; };
 		7492A2C627319E7800DCFE27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492A2C527319E7800DCFE27 /* LoginViewController.swift */; };
 		7492A2C827319EA300DCFE27 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492A2C727319EA300DCFE27 /* RegisterViewController.swift */; };
 		7492A2CC2731A25500DCFE27 /* ConfirmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492A2CB2731A25500DCFE27 /* ConfirmeViewController.swift */; };
 		749AF44F2730D5BE00D32AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF44E2730D5BE00D32AEA /* AppDelegate.swift */; };
 		749AF4512730D5BE00D32AEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4502730D5BE00D32AEA /* SceneDelegate.swift */; };
-		749AF4532730D5BE00D32AEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4522730D5BE00D32AEA /* ViewController.swift */; };
 		749AF4562730D5BE00D32AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749AF4542730D5BE00D32AEA /* Main.storyboard */; };
 		749AF4582730D5BF00D32AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749AF4572730D5BF00D32AEA /* Assets.xcassets */; };
 		749AF45B2730D5BF00D32AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749AF4592730D5BF00D32AEA /* LaunchScreen.storyboard */; };
 		749AF4662730D5BF00D32AEA /* MasonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4652730D5BF00D32AEA /* MasonTests.swift */; };
 		749AF4702730D5BF00D32AEA /* MasonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF46F2730D5BF00D32AEA /* MasonUITests.swift */; };
 		749AF4722730D5BF00D32AEA /* MasonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AF4712730D5BF00D32AEA /* MasonUITestsLaunchTests.swift */; };
+		74E83CD02741FC68005CAA3F /* Ques5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CCF2741FC68005CAA3F /* Ques5ViewController.swift */; };
+		74E83CD22742082E005CAA3F /* Ques6_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CD12742082E005CAA3F /* Ques6_1ViewController.swift */; };
+		74E83CD42742087B005CAA3F /* Ques6_2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CD32742087B005CAA3F /* Ques6_2ViewController.swift */; };
+		74E83CD627420889005CAA3F /* Ques7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CD527420889005CAA3F /* Ques7ViewController.swift */; };
+		74E83CD82745D64A005CAA3F /* Ques8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CD72745D64A005CAA3F /* Ques8ViewController.swift */; };
+		74E83CDC2745D950005CAA3F /* Ques9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E83CDB2745D950005CAA3F /* Ques9ViewController.swift */; };
+		90700FC5826BBD17D8710019 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A2A4168A71AC21341641C /* AmplifyModels.swift */; };
+		A6B64FF4298B2D1826145B83 /* Perception+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDE02F2AAA66A715974D8F5 /* Perception+Schema.swift */; };
 		BD3D923C788D1582DF9275AE /* Pods_Mason.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66A923E9990545A325AB547 /* Pods_Mason.framework */; };
 		BE2C7AE6BAE0E2749B568E3D /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1698652BFD727C984EED5559 /* awsconfiguration.json */; };
 		DDEA41FCA13E7A8D2FE3B25B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */; };
+		E181C92A47F938FFF9B04F27 /* Questions+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF300F3621D70AA9D4A1031 /* Questions+Schema.swift */; };
+		E84BB4532D37A56772289952 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD594EE6E4659ECC2B272D74 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,18 +65,22 @@
 /* Begin PBXFileReference section */
 		1698652BFD727C984EED5559 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		6BF300F3621D70AA9D4A1031 /* Questions+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Questions+Schema.swift"; path = "amplify/generated/models/Questions+Schema.swift"; sourceTree = "<group>"; };
+		7457128A273E7F2000432F90 /* Ques3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques3ViewController.swift; sourceTree = "<group>"; };
+		7457128C273E7F2C00432F90 /* Ques4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques4ViewController.swift; sourceTree = "<group>"; };
 		746C4D2C2733D2F600D36D20 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		7476F11E27325E7800132908 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74899E48273D7051000E3F1F /* PrequestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrequestionController.swift; sourceTree = "<group>"; };
 		74899E4C273D8571000E3F1F /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
+		74899E50273E386D000E3F1F /* Ques1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques1ViewController.swift; sourceTree = "<group>"; };
+		74899E52273E3913000E3F1F /* Ques2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques2ViewController.swift; sourceTree = "<group>"; };
 		7492A2C527319E7800DCFE27 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7492A2C727319EA300DCFE27 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7492A2CB2731A25500DCFE27 /* ConfirmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmeViewController.swift; sourceTree = "<group>"; };
 		749AF44B2730D5BE00D32AEA /* Mason.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mason.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749AF44E2730D5BE00D32AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749AF4502730D5BE00D32AEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		749AF4522730D5BE00D32AEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		749AF4552730D5BE00D32AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		749AF4572730D5BF00D32AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		749AF45A2730D5BF00D32AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,8 +90,20 @@
 		749AF46B2730D5BF00D32AEA /* MasonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		749AF46F2730D5BF00D32AEA /* MasonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonUITests.swift; sourceTree = "<group>"; };
 		749AF4712730D5BF00D32AEA /* MasonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74E83CCF2741FC68005CAA3F /* Ques5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques5ViewController.swift; sourceTree = "<group>"; };
+		74E83CD12742082E005CAA3F /* Ques6_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques6_1ViewController.swift; sourceTree = "<group>"; };
+		74E83CD32742087B005CAA3F /* Ques6_2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques6_2ViewController.swift; sourceTree = "<group>"; };
+		74E83CD527420889005CAA3F /* Ques7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques7ViewController.swift; sourceTree = "<group>"; };
+		74E83CD72745D64A005CAA3F /* Ques8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques8ViewController.swift; sourceTree = "<group>"; };
+		74E83CDB2745D950005CAA3F /* Ques9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques9ViewController.swift; sourceTree = "<group>"; };
 		88C1AD27B84E3DA3385E73A8 /* Pods-Mason.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mason.release.xcconfig"; path = "Target Support Files/Pods-Mason/Pods-Mason.release.xcconfig"; sourceTree = "<group>"; };
+		924CFF169826CC4D23A714FC /* Questions.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Questions.swift; path = amplify/generated/models/Questions.swift; sourceTree = "<group>"; };
+		9D542921CF767CB7D3DA4181 /* User+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "User+Schema.swift"; path = "amplify/generated/models/User+Schema.swift"; sourceTree = "<group>"; };
+		A4A095FE13ADCA830366EEBD /* Perception.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Perception.swift; path = amplify/generated/models/Perception.swift; sourceTree = "<group>"; };
+		ACDE02F2AAA66A715974D8F5 /* Perception+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Perception+Schema.swift"; path = "amplify/generated/models/Perception+Schema.swift"; sourceTree = "<group>"; };
+		AD594EE6E4659ECC2B272D74 /* User.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = User.swift; path = amplify/generated/models/User.swift; sourceTree = "<group>"; };
 		D1F35F0993A22FCE5222EBC1 /* Pods-Mason.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mason.debug.xcconfig"; path = "Target Support Files/Pods-Mason/Pods-Mason.debug.xcconfig"; sourceTree = "<group>"; };
+		DD8A2A4168A71AC21341641C /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		E66A923E9990545A325AB547 /* Pods_Mason.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mason.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +150,20 @@
 			name = AmplifyConfig;
 			sourceTree = "<group>";
 		};
+		57D6FACCB6EBF6A6B8D7B93A /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD8A2A4168A71AC21341641C /* AmplifyModels.swift */,
+				ACDE02F2AAA66A715974D8F5 /* Perception+Schema.swift */,
+				A4A095FE13ADCA830366EEBD /* Perception.swift */,
+				6BF300F3621D70AA9D4A1031 /* Questions+Schema.swift */,
+				924CFF169826CC4D23A714FC /* Questions.swift */,
+				9D542921CF767CB7D3DA4181 /* User+Schema.swift */,
+				AD594EE6E4659ECC2B272D74 /* User.swift */,
+			);
+			name = AmplifyModels;
+			sourceTree = "<group>";
+		};
 		749AF4422730D5BE00D32AEA = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +174,7 @@
 				AD35FBA8BB0B24460D9E7008 /* Pods */,
 				0B7D932CB79D54FB50CF702C /* Frameworks */,
 				182C13D9E1980FDAD588698A /* AmplifyConfig */,
+				57D6FACCB6EBF6A6B8D7B93A /* AmplifyModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,7 +195,6 @@
 				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
 				749AF44E2730D5BE00D32AEA /* AppDelegate.swift */,
 				749AF4502730D5BE00D32AEA /* SceneDelegate.swift */,
-				749AF4522730D5BE00D32AEA /* ViewController.swift */,
 				7492A2C527319E7800DCFE27 /* LoginViewController.swift */,
 				7492A2C727319EA300DCFE27 /* RegisterViewController.swift */,
 				7492A2CB2731A25500DCFE27 /* ConfirmeViewController.swift */,
@@ -156,6 +202,16 @@
 				74899E48273D7051000E3F1F /* PrequestionController.swift */,
 				74899E4C273D8571000E3F1F /* TapBarController.swift */,
 				749AF4542730D5BE00D32AEA /* Main.storyboard */,
+				74E83CDB2745D950005CAA3F /* Ques9ViewController.swift */,
+				74E83CD72745D64A005CAA3F /* Ques8ViewController.swift */,
+				74E83CD32742087B005CAA3F /* Ques6_2ViewController.swift */,
+				74E83CD527420889005CAA3F /* Ques7ViewController.swift */,
+				74899E50273E386D000E3F1F /* Ques1ViewController.swift */,
+				74899E52273E3913000E3F1F /* Ques2ViewController.swift */,
+				7457128A273E7F2000432F90 /* Ques3ViewController.swift */,
+				7457128C273E7F2C00432F90 /* Ques4ViewController.swift */,
+				74E83CCF2741FC68005CAA3F /* Ques5ViewController.swift */,
+				74E83CD12742082E005CAA3F /* Ques6_1ViewController.swift */,
 				749AF4572730D5BF00D32AEA /* Assets.xcassets */,
 				749AF4592730D5BF00D32AEA /* LaunchScreen.storyboard */,
 				749AF45C2730D5BF00D32AEA /* Info.plist */,
@@ -372,15 +428,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749AF4532730D5BE00D32AEA /* ViewController.swift in Sources */,
 				74899E49273D7051000E3F1F /* PrequestionController.swift in Sources */,
 				7492A2CC2731A25500DCFE27 /* ConfirmeViewController.swift in Sources */,
 				7492A2C827319EA300DCFE27 /* RegisterViewController.swift in Sources */,
+				74899E51273E386D000E3F1F /* Ques1ViewController.swift in Sources */,
 				74899E4D273D8571000E3F1F /* TapBarController.swift in Sources */,
+				74E83CD22742082E005CAA3F /* Ques6_1ViewController.swift in Sources */,
 				749AF44F2730D5BE00D32AEA /* AppDelegate.swift in Sources */,
+				74E83CD02741FC68005CAA3F /* Ques5ViewController.swift in Sources */,
 				7492A2C627319E7800DCFE27 /* LoginViewController.swift in Sources */,
 				7476F11F27325E7800132908 /* HomeViewController.swift in Sources */,
+				74899E53273E3913000E3F1F /* Ques2ViewController.swift in Sources */,
 				749AF4512730D5BE00D32AEA /* SceneDelegate.swift in Sources */,
+				90700FC5826BBD17D8710019 /* AmplifyModels.swift in Sources */,
+				A6B64FF4298B2D1826145B83 /* Perception+Schema.swift in Sources */,
+				74E83CD42742087B005CAA3F /* Ques6_2ViewController.swift in Sources */,
+				74E83CDC2745D950005CAA3F /* Ques9ViewController.swift in Sources */,
+				7457128D273E7F2C00432F90 /* Ques4ViewController.swift in Sources */,
+				567FBAE80AD2EED1F0D4E52E /* Perception.swift in Sources */,
+				74E83CD82745D64A005CAA3F /* Ques8ViewController.swift in Sources */,
+				E181C92A47F938FFF9B04F27 /* Questions+Schema.swift in Sources */,
+				7457128B273E7F2000432F90 /* Ques3ViewController.swift in Sources */,
+				63BD69E62E51911CC569212A /* Questions.swift in Sources */,
+				1C0B314B73EBE3DF136B3312 /* User+Schema.swift in Sources */,
+				E84BB4532D37A56772289952 /* User.swift in Sources */,
+				74E83CD627420889005CAA3F /* Ques7ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
