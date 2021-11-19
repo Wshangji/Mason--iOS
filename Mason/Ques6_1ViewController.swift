@@ -30,13 +30,18 @@ class Ques6_1ViewController: UIViewController {
             print("error")
         }
     }
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "To6_2" {
-            return btn_yes.isSelected
+
+    @IBAction func onClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if btn_yes.isSelected {
+            guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques6_2") as? Ques6_2ViewController else {  return }
+            secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            self.present(secondVC, animated: true, completion: nil)
         } else {
-            return true
+            guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques7") as? Ques7ViewController else {  return }
+            secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            self.present(secondVC, animated: true, completion: nil)
         }
     }
-
-
+    
 }

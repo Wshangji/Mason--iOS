@@ -13,7 +13,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="LoginVC" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Login">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="7OG-hc-bqw" kind="presentation" identifier="LoginSuccess" modalPresentationStyle="fullScreen" id="cJV-lo-Hdn"/>
+                                            <action selector="login_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qlp-x4-otl"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9g-qv-ADO">
@@ -101,7 +101,7 @@
         <!--RegisterVC-->
         <scene sceneID="Va6-uP-Kcc">
             <objects>
-                <viewController title="RegisterVC" id="mg8-OS-l9j" customClass="RegisterViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" title="RegisterVC" id="mg8-OS-l9j" customClass="RegisterViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OlA-24-8wW" customClass="Register">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="AZb-TM-nLX" kind="show" identifier="Confirme" id="qjq-Az-jJe"/>
+                                            <action selector="registe_btn:" destination="mg8-OS-l9j" eventType="touchUpInside" id="t1r-pi-FMU"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBo-dX-GRJ">
@@ -220,7 +220,7 @@
         <!--User-->
         <scene sceneID="wA2-dM-tNa">
             <objects>
-                <viewController title="User" id="5R0-Sf-X1l" sceneMemberID="viewController">
+                <viewController title="User" id="5R0-Sf-X1l" customClass="UserViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n72-Gc-yCQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,6 +232,9 @@
                                 <state key="normal" title="sign out" image="exit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sign_out_btn:" destination="5R0-Sf-X1l" eventType="touchUpInside" id="cdG-Fd-4oi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3nK-w9-EnV"/>
@@ -295,7 +298,7 @@
         <!--Tap Bar Controller-->
         <scene sceneID="yCs-7q-SX7">
             <objects>
-                <tabBarController id="7OG-hc-bqw" customClass="TapBarController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main_view" id="7OG-hc-bqw" customClass="TapBarController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="LNj-f7-sbx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FcV-G9-67S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -315,13 +318,13 @@
         <!--ConfirmeVC-->
         <scene sceneID="Uhv-Au-SQS">
             <objects>
-                <viewController title="ConfirmeVC" id="AZb-TM-nLX" customClass="ConfirmeViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confirme" title="ConfirmeVC" id="AZb-TM-nLX" customClass="ConfirmeViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pz0-3D-XPT" customClass="Confirmation">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dee-1g-Ced">
-                                <rect key="frame" x="55" y="374.5" width="304" height="156"/>
+                                <rect key="frame" x="55" y="352.5" width="304" height="156"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-Od-8KI">
                                         <rect key="frame" x="34.5" y="0.0" width="235" height="26.5"/>
@@ -351,7 +354,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Tuk-N5-atK" kind="presentation" identifier="ToPer" modalPresentationStyle="fullScreen" id="g2u-iS-BGH"/>
+                                            <action selector="confirm_btn:" destination="AZb-TM-nLX" eventType="touchUpInside" id="492-Tx-yAj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -402,7 +405,7 @@
         <!--MessageVC-->
         <scene sceneID="gBK-30-sM8">
             <objects>
-                <viewController title="MessageVC" id="Tuk-N5-atK" customClass="PrequestionController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="message" title="MessageVC" id="Tuk-N5-atK" customClass="PrequestionController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h59-SP-rRj" customClass="Message">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -692,6 +695,9 @@
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="submit:" destination="Tuk-N5-atK" eventType="touchUpInside" id="nP5-8l-wmx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -763,12 +769,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcf-SZ-xFi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3141" y="606"/>
+            <point key="canvasLocation" x="3828" y="554"/>
         </scene>
         <!--Thinks-->
         <scene sceneID="OFC-xM-cXv">
             <objects>
-                <viewController title="Thinks" id="2Mr-Cj-GvM" sceneMemberID="viewController">
+                <viewController title="Thinks" id="2Mr-Cj-GvM" customClass="FinishViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOi-ZJ-Jen">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -821,8 +827,8 @@
                                 <rect key="frame" x="10" y="261.5" width="394" height="273.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9K-vD-Af4">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="161.5"/>
-                                        <string key="text">Do you currently have any of the following conditions that are NOI explained by seasonal allergies, flu, or another health condition?. Bluish lips or face</string>
+                                        <rect key="frame" x="0.0" y="0.0" width="382.5" height="161.5"/>
+                                        <string key="text">On a scale of 1-10, how hopeful are you about achieving your academic goals this semester (1-not at all hopeful, 10-extremely hopeful)?</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -897,19 +903,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gyV-iG-p5X">
-                                                <rect key="frame" x="20" y="25" width="374" height="494"/>
+                                                <rect key="frame" x="20" y="45" width="374" height="549"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKv-MC-fI8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364.5" height="110"/>
-                                                        <string key="text">Have you had any of the following symptoms in the Jast 24 hours that are not explained by seasonal allergies or another health condition?</string>
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="165"/>
+                                                        <string key="text">There are many coping strategies that students have used to support their mental wellness during COVID-19. Please indicate which of the following you have benefitted from this week. (select all that apply)</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M44-dH-ywJ">
-                                                        <rect key="frame" x="0.0" y="126" width="61" height="32"/>
+                                                        <rect key="frame" x="0.0" y="181" width="208" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Yes" image="ios-radio-button-off">
+                                                        <state key="normal" title="interaction with family" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -918,9 +924,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIu-EZ-9vg">
-                                                        <rect key="frame" x="0.0" y="174" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="229" width="290" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="interaction with significant other" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -929,9 +935,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5m-wP-P2i">
-                                                        <rect key="frame" x="0.0" y="222" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="277" width="178" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="being around pets" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -940,9 +946,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkp-FR-4df">
-                                                        <rect key="frame" x="0.0" y="270" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="325" width="267" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="virtual mental health services" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -950,10 +956,10 @@
                                                             <action selector="checkbtn:" destination="7WM-Wm-WlC" eventType="touchUpInside" id="9gM-2e-Ry1"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-ml-Znu">
-                                                        <rect key="frame" x="0.0" y="318" width="180" height="32"/>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rVb-ml-Znu">
+                                                        <rect key="frame" x="0.0" y="373" width="362" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="involvement with campus student groups" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -962,9 +968,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-ZA-uA4">
-                                                        <rect key="frame" x="0.0" y="366" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="421" width="173" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="increased privacy" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -972,10 +978,10 @@
                                                             <action selector="checkbtn:" destination="7WM-Wm-WlC" eventType="touchUpInside" id="mHM-Ny-Y8O"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-NO-k8q">
-                                                        <rect key="frame" x="0.0" y="414" width="180" height="32"/>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-NO-k8q">
+                                                        <rect key="frame" x="0.0" y="469" width="374" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="increased financial support from your institution" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -984,9 +990,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-Ym-ozf">
-                                                        <rect key="frame" x="0.0" y="462" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="517" width="75" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="other" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -997,7 +1003,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-UV-N3N">
-                                                <rect key="frame" x="65" y="544" width="284" height="38"/>
+                                                <rect key="frame" x="65" y="619" width="284" height="38"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1016,7 +1022,7 @@
                                             <constraint firstAttribute="trailing" secondItem="WsV-UV-N3N" secondAttribute="trailing" constant="65" id="F9z-eB-m7e"/>
                                             <constraint firstAttribute="trailing" secondItem="gyV-iG-p5X" secondAttribute="trailing" constant="20" id="Hb2-qa-wta"/>
                                             <constraint firstItem="gyV-iG-p5X" firstAttribute="leading" secondItem="YPC-hZ-zQM" secondAttribute="leading" constant="20" id="LkQ-GU-jyX"/>
-                                            <constraint firstItem="gyV-iG-p5X" firstAttribute="top" secondItem="YPC-hZ-zQM" secondAttribute="top" constant="25" id="qU6-Qj-PGh"/>
+                                            <constraint firstItem="gyV-iG-p5X" firstAttribute="top" secondItem="YPC-hZ-zQM" secondAttribute="top" constant="45" id="qU6-Qj-PGh"/>
                                             <constraint firstItem="WsV-UV-N3N" firstAttribute="leading" secondItem="YPC-hZ-zQM" secondAttribute="leading" constant="65" id="sYL-tj-14c"/>
                                         </constraints>
                                     </view>
@@ -1066,17 +1072,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="J10-mt-cnO">
-                                <rect key="frame" x="10" y="306.5" width="394" height="183.5"/>
+                                <rect key="frame" x="10" y="332.5" width="394" height="131"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-Ug-KjI">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
-                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="During this week, with whom did you have the most interaction? Ex.best friend, sister, mother, write in option" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Og-Ug-KjI">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="79"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b3Y-4T-Kn5">
-                                        <rect key="frame" x="0.0" y="147.5" width="394" height="36"/>
+                                        <rect key="frame" x="0.0" y="95" width="394" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1087,7 +1092,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujL-ni-0hh">
-                                <rect key="frame" x="65" y="500" width="284" height="38"/>
+                                <rect key="frame" x="65" y="473.5" width="284" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1129,17 +1134,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hBu-QC-cyB">
-                                <rect key="frame" x="10" y="306.5" width="394" height="183.5"/>
+                                <rect key="frame" x="10" y="345.5" width="394" height="105"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-NL-Fm6">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
-                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were these interactions mostly virtual or in person?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-NL-Fm6">
+                                        <rect key="frame" x="0.0" y="0.0" width="385" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-0O-vfk">
-                                        <rect key="frame" x="0.0" y="147.5" width="394" height="36"/>
+                                        <rect key="frame" x="0.0" y="69" width="394" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1150,7 +1154,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-4H-q5w">
-                                <rect key="frame" x="65" y="500" width="284" height="38"/>
+                                <rect key="frame" x="65" y="460.5" width="284" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1192,17 +1196,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YGp-jm-0i4">
-                                <rect key="frame" x="10" y="284.5" width="394" height="227.5"/>
+                                <rect key="frame" x="10" y="323.5" width="394" height="149"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-A5-NhV">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
-                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lf receiving mental health treatment or planning to?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsi-A5-NhV">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsb-EX-Jxs">
-                                        <rect key="frame" x="0.0" y="147.5" width="65" height="32"/>
+                                        <rect key="frame" x="0.0" y="69" width="65" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Yes" image="ios-radio-button-off">
@@ -1214,7 +1217,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIW-Du-OX7">
-                                        <rect key="frame" x="0.0" y="195.5" width="59" height="32"/>
+                                        <rect key="frame" x="0.0" y="117" width="59" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="No" image="ios-radio-button-off">
@@ -1228,7 +1231,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVb-tj-oTx">
-                                <rect key="frame" x="65" y="522" width="284" height="38"/>
+                                <rect key="frame" x="65" y="482.5" width="284" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1236,7 +1239,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fx5-9f-npg" kind="presentation" modalPresentationStyle="fullScreen" id="TAU-kI-KYJ"/>
+                                    <action selector="onClick:" destination="TqM-aX-f4a" eventType="touchUpInside" id="b6w-xI-qwa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1265,23 +1268,22 @@
         <!--Ques6_2-->
         <scene sceneID="UKz-Kw-zIB">
             <objects>
-                <viewController title="Ques6_2" id="fx5-9f-npg" customClass="Ques6_2ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ques6_2" title="Ques6_2" id="fx5-9f-npg" customClass="Ques6_2ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0LH-7D-HQJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CuH-J2-mcL">
-                                <rect key="frame" x="10" y="284.5" width="394" height="227.5"/>
+                                <rect key="frame" x="10" y="323.5" width="394" height="149"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKX-G6-FS4">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="131.5"/>
-                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you spoken with mental health professional this week?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKX-G6-FS4">
+                                        <rect key="frame" x="0.0" y="0.0" width="346.5" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uX-lu-2by">
-                                        <rect key="frame" x="0.0" y="147.5" width="65" height="32"/>
+                                        <rect key="frame" x="0.0" y="69" width="65" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Yes" image="ios-radio-button-off">
@@ -1293,7 +1295,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-9F-Prz">
-                                        <rect key="frame" x="0.0" y="195.5" width="59" height="32"/>
+                                        <rect key="frame" x="0.0" y="117" width="59" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="No" image="ios-radio-button-off">
@@ -1307,7 +1309,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bO4-zg-HOX">
-                                <rect key="frame" x="65" y="522" width="284" height="38"/>
+                                <rect key="frame" x="65" y="482.5" width="284" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1344,7 +1346,7 @@
         <!--Ques7-->
         <scene sceneID="j4u-Dl-HJJ">
             <objects>
-                <viewController title="Ques7" id="q7D-Va-0U5" customClass="Ques7ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ques7" title="Ques7" id="q7D-Va-0U5" customClass="Ques7ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zYv-HG-At3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1356,17 +1358,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-y6-d8g">
-                                                <rect key="frame" x="20" y="25" width="374" height="210"/>
+                                                <rect key="frame" x="20" y="45" width="374" height="105"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-Wi-Dpm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="158"/>
-                                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My job took up time that l'd rather spend at school or on schoolwork." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-Wi-Dpm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="53"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZAz-cS-i7i">
-                                                        <rect key="frame" x="0.0" y="174" width="374" height="36"/>
+                                                        <rect key="frame" x="0.0" y="69" width="374" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1377,17 +1378,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8wx-Bl-Vm2">
-                                                <rect key="frame" x="20" y="260" width="374" height="210"/>
+                                                <rect key="frame" x="20" y="175" width="374" height="105"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-go-pb2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="158"/>
-                                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l've spent less time studying and doing homework because of myjob." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-go-pb2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="372.5" height="53"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCV-xL-5rA">
-                                                        <rect key="frame" x="0.0" y="174" width="374" height="36"/>
+                                                        <rect key="frame" x="0.0" y="69" width="374" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1398,17 +1398,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="myh-f8-gbc">
-                                                <rect key="frame" x="20" y="495" width="374" height="210"/>
+                                                <rect key="frame" x="20" y="305" width="374" height="78.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-bC-fx7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="158"/>
-                                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Because of my job, I go to schoolitired." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-bC-fx7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="363.5" height="26.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDf-a0-aPX">
-                                                        <rect key="frame" x="0.0" y="174" width="374" height="36"/>
+                                                        <rect key="frame" x="0.0" y="42.5" width="374" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1419,17 +1418,16 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-bF-nfn">
-                                                <rect key="frame" x="20" y="730" width="374" height="210"/>
+                                                <rect key="frame" x="20" y="408.5" width="374" height="105"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpJ-ob-VoY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="367" height="158"/>
-                                                        <string key="text">Are you fully vaccinated - received the second dose of Pfizer, Moderna vaccine, one dose of J&amp;J vaccine, or World Health Organization (WHO) authorized vaccinemore than 14 days ago?</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My job demands and responsibilities interfered with myschoolwork." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpJ-ob-VoY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="53"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yha-he-Pop">
-                                                        <rect key="frame" x="0.0" y="174" width="374" height="36"/>
+                                                        <rect key="frame" x="0.0" y="69" width="374" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1440,7 +1438,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOh-Tu-VMW">
-                                                <rect key="frame" x="65" y="975" width="284" height="38"/>
+                                                <rect key="frame" x="65" y="548.5" width="284" height="38"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1467,7 +1465,7 @@
                                             <constraint firstItem="8wx-Bl-Vm2" firstAttribute="top" secondItem="hpG-y6-d8g" secondAttribute="bottom" constant="25" id="b9V-32-pRa"/>
                                             <constraint firstItem="c8p-bF-nfn" firstAttribute="top" secondItem="myh-f8-gbc" secondAttribute="bottom" constant="25" id="mHg-7u-2gE"/>
                                             <constraint firstItem="8wx-Bl-Vm2" firstAttribute="leading" secondItem="A7l-U2-M4y" secondAttribute="leading" constant="20" id="mTB-zz-vuN"/>
-                                            <constraint firstItem="hpG-y6-d8g" firstAttribute="top" secondItem="A7l-U2-M4y" secondAttribute="top" constant="25" id="oN9-Og-eYN"/>
+                                            <constraint firstItem="hpG-y6-d8g" firstAttribute="top" secondItem="A7l-U2-M4y" secondAttribute="top" constant="45" id="oN9-Og-eYN"/>
                                             <constraint firstItem="myh-f8-gbc" firstAttribute="top" secondItem="8wx-Bl-Vm2" secondAttribute="bottom" constant="25" id="uUj-xG-zmf"/>
                                             <constraint firstItem="qOh-Tu-VMW" firstAttribute="leading" secondItem="A7l-U2-M4y" secondAttribute="leading" constant="65" id="zWZ-dZ-chB"/>
                                         </constraints>
@@ -1508,7 +1506,7 @@
         <!--Ques8-->
         <scene sceneID="PKh-cB-Wpc">
             <objects>
-                <viewController title="Ques8" id="Rhc-u2-8TY" customClass="Ques8ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ques8" title="Ques8" id="Rhc-u2-8TY" customClass="Ques8ViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vef-Zf-bor">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1517,14 +1515,21 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-Vg-dZb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1360"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-zj-tBZ">
-                                                <rect key="frame" x="20" y="15" width="374" height="161.5"/>
+                                                <rect key="frame" x="20" y="15" width="374" height="548"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hN-Rk-dT0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="161.5"/>
-                                                        <string key="text">Do you currently have any of the following conditions that are NOI explained by seasonal allergies, flu, or another health condition?. Bluish lips or face</string>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="548"/>
+                                                        <string key="text">Below are five statements with which you may agree or disagree. Using the 1-7 scale below,indicate your agreement with each item by placing the appropriate number in the line preceding that item. Please be open and honest in your responding.
+
+1 = Strongly Disagree
+2 = Disagree\n3 = Slightly Disagree
+4 = Neither Agree or Disagree
+5 = Slightly Agree
+6 = Agree
+7 = Strongly Agree</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1532,10 +1537,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Un-Ax-E2l">
-                                                <rect key="frame" x="20" y="196.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="583" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQS-LH-KJH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In most ways my life is close to my ideal." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQS-LH-KJH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="358.5" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1562,10 +1567,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lQy-7b-lvn">
-                                                <rect key="frame" x="20" y="393" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="779.5" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-ni-53w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The conditions of my life are excellent." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-ni-53w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1592,23 +1597,23 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ysc-zU-BSt">
-                                                <rect key="frame" x="20" y="589.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="976" width="374" height="144.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxC-14-ugF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am satisfied with my life." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxC-14-ugF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294.5" height="32.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="gRI-iK-abu">
-                                                        <rect key="frame" x="-2" y="80.5" width="378" height="31"/>
+                                                        <rect key="frame" x="-2" y="48.5" width="378" height="31"/>
                                                         <connections>
                                                             <action selector="changeData:" destination="nvf-e8-Rcs" eventType="valueChanged" id="lNR-lZ-juG"/>
                                                             <action selector="changeData:" destination="Rhc-u2-8TY" eventType="valueChanged" id="yvB-PP-aOZ"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esQ-Tm-HFU">
-                                                        <rect key="frame" x="0.0" y="126.5" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="94.5" width="374" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1622,10 +1627,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cJh-JP-J06">
-                                                <rect key="frame" x="20" y="786" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="1140.5" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl6-tY-pQt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="So far, I have gotten the important things I want in life." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl6-tY-pQt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="336.5" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1652,9 +1657,9 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TXk-Ql-9rw">
-                                                <rect key="frame" x="20" y="982.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="1337" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-mH-6LX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If I could live my life over, I would change almost nothing." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-mH-6LX">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
@@ -1682,7 +1687,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxN-TA-K6e">
-                                                <rect key="frame" x="65" y="1194" width="284" height="38"/>
+                                                <rect key="frame" x="65" y="1548.5" width="284" height="38"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1714,7 +1719,7 @@
                                             <constraint firstItem="KxN-TA-K6e" firstAttribute="top" secondItem="TXk-Ql-9rw" secondAttribute="bottom" constant="35" id="fEW-Wv-YRX"/>
                                             <constraint firstItem="TXk-Ql-9rw" firstAttribute="top" secondItem="cJh-JP-J06" secondAttribute="bottom" constant="20" id="kKb-Xw-L3k"/>
                                             <constraint firstItem="cJh-JP-J06" firstAttribute="top" secondItem="Ysc-zU-BSt" secondAttribute="bottom" constant="20" id="kVd-Z7-SsM"/>
-                                            <constraint firstAttribute="height" constant="1360" id="pDp-vM-mo5"/>
+                                            <constraint firstAttribute="height" constant="1700" id="pDp-vM-mo5"/>
                                             <constraint firstItem="KxN-TA-K6e" firstAttribute="leading" secondItem="uDt-Vg-dZb" secondAttribute="leading" constant="65" id="pg2-Ge-4LZ"/>
                                             <constraint firstItem="TXk-Ql-9rw" firstAttribute="leading" secondItem="uDt-Vg-dZb" secondAttribute="leading" constant="20" id="x46-tX-JPi"/>
                                             <constraint firstItem="lQy-7b-lvn" firstAttribute="leading" secondItem="uDt-Vg-dZb" secondAttribute="leading" constant="20" id="x8k-ep-dyc"/>
@@ -1771,22 +1776,21 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKW-U6-FgV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-Ec-cib">
-                                                <rect key="frame" x="20" y="25" width="374" height="446"/>
+                                                <rect key="frame" x="20" y="45" width="374" height="391"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-gH-NRh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="364.5" height="110"/>
-                                                        <string key="text">Have you had any of the following symptoms in the Jast 24 hours that are not explained by seasonal allergies or another health condition?</string>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What has been most stressful, if anything, for you during this week?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xri-gH-NRh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342.5" height="55"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKz-a7-Tat">
-                                                        <rect key="frame" x="0.0" y="126" width="61" height="32"/>
+                                                        <rect key="frame" x="0.0" y="71" width="115" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Yes" image="ios-radio-button-off">
+                                                        <state key="normal" title="Classwork" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1795,9 +1799,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-LY-JU0">
-                                                        <rect key="frame" x="0.0" y="174" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="119" width="62" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="Job" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1806,9 +1810,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txq-wq-fD8">
-                                                        <rect key="frame" x="0.0" y="222" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="167" width="104" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="Finances" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1817,9 +1821,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-eC-QmX">
-                                                        <rect key="frame" x="0.0" y="270" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="215" width="131" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="Relationship" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1828,9 +1832,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIe-5i-hzW">
-                                                        <rect key="frame" x="0.0" y="318" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="263" width="84" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="Family" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1839,9 +1843,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcL-O1-zTV">
-                                                        <rect key="frame" x="0.0" y="366" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="311" width="92" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="Friends" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1850,9 +1854,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rD-hP-JIt">
-                                                        <rect key="frame" x="0.0" y="414" width="180" height="32"/>
+                                                        <rect key="frame" x="0.0" y="359" width="75" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="None of the above" image="ios-radio-button-off">
+                                                        <state key="normal" title="other" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <state key="selected" image="ios-radio-button-on"/>
@@ -1863,7 +1867,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-wj-m75">
-                                                <rect key="frame" x="65" y="496" width="284" height="38"/>
+                                                <rect key="frame" x="65" y="461" width="284" height="38"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1882,8 +1886,8 @@
                                             <constraint firstItem="ZGF-Ec-cib" firstAttribute="leading" secondItem="qKW-U6-FgV" secondAttribute="leading" constant="20" id="Npb-67-ogz"/>
                                             <constraint firstAttribute="trailing" secondItem="Bal-wj-m75" secondAttribute="trailing" constant="65" id="SGY-0z-rMp"/>
                                             <constraint firstItem="Bal-wj-m75" firstAttribute="leading" secondItem="qKW-U6-FgV" secondAttribute="leading" constant="65" id="Txn-3Q-qjb"/>
-                                            <constraint firstItem="ZGF-Ec-cib" firstAttribute="top" secondItem="qKW-U6-FgV" secondAttribute="top" constant="25" id="ra7-qM-Xve"/>
-                                            <constraint firstAttribute="height" constant="1000" id="ubQ-EN-Xn9"/>
+                                            <constraint firstItem="ZGF-Ec-cib" firstAttribute="top" secondItem="qKW-U6-FgV" secondAttribute="top" constant="45" id="ra7-qM-Xve"/>
+                                            <constraint firstAttribute="height" constant="818" id="ubQ-EN-Xn9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1934,14 +1938,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2o-dh-cnw">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1360"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-xu-lRm">
-                                                <rect key="frame" x="20" y="15" width="374" height="161.5"/>
+                                                <rect key="frame" x="20" y="15" width="374" height="322.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSr-CM-Qd9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="161.5"/>
-                                                        <string key="text">Do you currently have any of the following conditions that are NOI explained by seasonal allergies, flu, or another health condition?. Bluish lips or face</string>
+                                                        <rect key="frame" x="0.0" y="0.0" width="368.5" height="322.5"/>
+                                                        <string key="text">Below are five statements with which you may agree or disagree. Using a 1-5 scale, where 1 =not very well and 5 = very well, indicate your agreement with each item by placing the appropriate number in the line next to that item. Please be open and honest in your responding.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1949,23 +1953,23 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1k9-En-yiX">
-                                                <rect key="frame" x="20" y="196.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="357.5" width="374" height="209"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-SO-0Se">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well can you get teachers to help you when you get stuck on your schoolwork?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-SO-0Se">
+                                                        <rect key="frame" x="0.0" y="0.0" width="363.5" height="97"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="i32-xL-hcw">
-                                                        <rect key="frame" x="-2" y="80.5" width="378" height="31"/>
+                                                        <rect key="frame" x="-2" y="113" width="378" height="31"/>
                                                         <connections>
                                                             <action selector="changeData:" destination="2S6-Jx-c1D" eventType="valueChanged" id="EbD-z3-3X6"/>
                                                             <action selector="changeData:" destination="nvf-e8-Rcs" eventType="valueChanged" id="LRQ-Ga-VOa"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faM-ma-uva">
-                                                        <rect key="frame" x="0.0" y="126.5" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="159" width="374" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1979,23 +1983,23 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-IS-fbT">
-                                                <rect key="frame" x="20" y="393" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="586.5" width="374" height="209"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-UX-4e5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well are you studying when there are other interesting things to do?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-UX-4e5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="97"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="xDt-he-fdh">
-                                                        <rect key="frame" x="-2" y="80.5" width="378" height="31"/>
+                                                        <rect key="frame" x="-2" y="113" width="378" height="31"/>
                                                         <connections>
                                                             <action selector="changeData:" destination="nvf-e8-Rcs" eventType="valueChanged" id="hrL-BA-WtX"/>
                                                             <action selector="changeData:" destination="2S6-Jx-c1D" eventType="valueChanged" id="xSk-S2-zzA"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJT-3W-nhk">
-                                                        <rect key="frame" x="0.0" y="126.5" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="159" width="374" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2009,23 +2013,23 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-qD-aIb">
-                                                <rect key="frame" x="20" y="589.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="815.5" width="374" height="209"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-nk-l9p">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well are you succeeding in finishing all your homework and required readings every day?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-nk-l9p">
+                                                        <rect key="frame" x="0.0" y="0.0" width="371" height="97"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="BbJ-cE-eOr">
-                                                        <rect key="frame" x="-2" y="80.5" width="378" height="31"/>
+                                                        <rect key="frame" x="-2" y="113" width="378" height="31"/>
                                                         <connections>
                                                             <action selector="changeData:" destination="nvf-e8-Rcs" eventType="valueChanged" id="G9D-Si-wTr"/>
                                                             <action selector="changeData:" destination="2S6-Jx-c1D" eventType="valueChanged" id="OqX-yA-goH"/>
                                                         </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-Wo-nkY">
-                                                        <rect key="frame" x="0.0" y="126.5" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="159" width="374" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -2039,10 +2043,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zos-cU-BZM">
-                                                <rect key="frame" x="20" y="786" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="1044.5" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acn-r9-LKA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well are you paying attention during every class?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acn-r9-LKA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="331" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2069,10 +2073,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="M7f-fb-zot">
-                                                <rect key="frame" x="20" y="982.5" width="374" height="176.5"/>
+                                                <rect key="frame" x="20" y="1241" width="374" height="176.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you currently have any of the following conditions that " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-vo-0Y6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How well are you succeeding in passing tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-vo-0Y6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="368.5" height="64.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2099,7 +2103,7 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-El-a5b">
-                                                <rect key="frame" x="65" y="1194" width="284" height="38"/>
+                                                <rect key="frame" x="65" y="1452.5" width="284" height="38"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -2120,7 +2124,7 @@
                                             <constraint firstItem="boJ-El-a5b" firstAttribute="top" secondItem="M7f-fb-zot" secondAttribute="bottom" constant="35" id="BYT-Ow-dqr"/>
                                             <constraint firstItem="boJ-El-a5b" firstAttribute="leading" secondItem="i2o-dh-cnw" secondAttribute="leading" constant="65" id="OPn-WA-P6E"/>
                                             <constraint firstAttribute="trailing" secondItem="4lZ-IS-fbT" secondAttribute="trailing" constant="20" id="PzB-cr-zWB"/>
-                                            <constraint firstAttribute="height" constant="1360" id="QbC-ma-ec9"/>
+                                            <constraint firstAttribute="height" constant="1600" id="QbC-ma-ec9"/>
                                             <constraint firstItem="1k9-En-yiX" firstAttribute="leading" secondItem="i2o-dh-cnw" secondAttribute="leading" constant="20" id="Qpx-wV-Uwt"/>
                                             <constraint firstAttribute="trailing" secondItem="KoL-qD-aIb" secondAttribute="trailing" constant="20" id="RsD-HZ-RGW"/>
                                             <constraint firstItem="KoL-qD-aIb" firstAttribute="top" secondItem="4lZ-IS-fbT" secondAttribute="bottom" constant="20" id="SSc-Pa-Uaa"/>
@@ -2176,11 +2180,109 @@
             </objects>
             <point key="canvasLocation" x="4661" y="-1823"/>
         </scene>
+        <!--PerContext-->
+        <scene sceneID="PGO-WA-Dro">
+            <objects>
+                <viewController storyboardIdentifier="PerContext" title="PerContext" id="wxM-Yu-4qW" customClass="PerContextViewController" customModule="Mason" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Go-Hb-Tit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQp-9a-KeJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-Lq-sob">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-w2-ucn">
+                                                <rect key="frame" x="20" y="30" width="374" height="1055"/>
+                                                <string key="text">PARTICIPATION: 
+
+Your participation is voluntary, and you can refuse to answer questions in weekly surveys or
+drop out at any time. We won’t associate any of your answers with you specifically. There are no costs or foreseeable risks for you to take part in this study. You will receive $20 for the completion of 8 weeks’ worth of surveys. Upon completing 8 weeks of surveys, you will be given $2/week for continued participation in the app. You can earn a maximum of $36 for completing each weekly survey. Note that you must reach 8 weeks of survey completions in order to receive any compensation. All payouts will be distributed in Amazon e-gift cards. Under the U.S. federal tax law, you may have individual responsibilities for disclosing the dollar value of the incentive received on this study. 
+
+ELIGIBILITY: 
+
+You are considered eligible to participate in this study if you: 
+ - Are 18 years of age or older \n
+ - Are a current undergraduate student at George Mason University 
+
+CONTACT: 
+
+This survey is being conducted by Lawrence Cheskin, MD and Alison Cuellar, PhD, multidisciplinary professors at George Mason University. You can contact them at lcheskin@gmu.edu and aevanscu@gmu.edu, respectively. Alternatively, you can reach Lawrence Cheskin, PhD at 703-993-6264. You may also contact the George Mason University Institutional Review Board office at 703-993-4121 or email irb@gmu.edu if you have questions or comments regarding your rights as a participant. This research has been reviewed according to George Mason University procedures governing your participation in this research. 
+
+CONSENT: 
+
+I have read this form, all my questions have been answered by the research staff, and I agree to participate in this study. By selecting “yes,” I indicate my eligibility and consent to participate.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEU-RA-Hef">
+                                                <rect key="frame" x="30" y="1115" width="354" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clP-V7-xlH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Yes"/>
+                                                        <connections>
+                                                            <action selector="context_yes:" destination="wxM-Yu-4qW" eventType="touchUpInside" id="vRe-WB-Dpz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rof-Xx-L3m">
+                                                        <rect key="frame" x="179" y="0.0" width="175" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="175" id="V1k-kD-rrr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="No"/>
+                                                        <connections>
+                                                            <action selector="context_no:" destination="wxM-Yu-4qW" eventType="touchUpInside" id="hsw-2e-aB1"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1250" id="0bg-kc-WDk"/>
+                                            <constraint firstItem="JEU-RA-Hef" firstAttribute="top" secondItem="WyA-w2-ucn" secondAttribute="bottom" constant="30" id="Cey-QM-df4"/>
+                                            <constraint firstItem="WyA-w2-ucn" firstAttribute="top" secondItem="FkN-Lq-sob" secondAttribute="top" constant="30" id="G0O-jY-Skt"/>
+                                            <constraint firstAttribute="trailing" secondItem="JEU-RA-Hef" secondAttribute="trailing" constant="30" id="K0V-JW-4KZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="WyA-w2-ucn" secondAttribute="trailing" constant="20" id="XXJ-b7-5j3"/>
+                                            <constraint firstItem="WyA-w2-ucn" firstAttribute="leading" secondItem="FkN-Lq-sob" secondAttribute="leading" constant="20" id="ZTu-Gw-ta2"/>
+                                            <constraint firstItem="JEU-RA-Hef" firstAttribute="leading" secondItem="FkN-Lq-sob" secondAttribute="leading" constant="30" id="lbW-oZ-UeN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FkN-Lq-sob" firstAttribute="trailing" secondItem="G9N-Sh-cX3" secondAttribute="trailing" id="J7a-s9-Z82"/>
+                                    <constraint firstItem="FkN-Lq-sob" firstAttribute="width" secondItem="9tC-oD-Jp3" secondAttribute="width" id="dT3-6U-0te"/>
+                                    <constraint firstItem="FkN-Lq-sob" firstAttribute="bottom" secondItem="G9N-Sh-cX3" secondAttribute="bottom" id="j59-s7-6Ch"/>
+                                    <constraint firstItem="FkN-Lq-sob" firstAttribute="top" secondItem="G9N-Sh-cX3" secondAttribute="top" id="jsj-VX-Tft"/>
+                                    <constraint firstItem="FkN-Lq-sob" firstAttribute="leading" secondItem="G9N-Sh-cX3" secondAttribute="leading" id="yB1-Dt-ouY"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="G9N-Sh-cX3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="9tC-oD-Jp3"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A88-Hj-biE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iQp-9a-KeJ" firstAttribute="top" secondItem="A88-Hj-biE" secondAttribute="top" id="4Ed-aL-OVb"/>
+                            <constraint firstItem="A88-Hj-biE" firstAttribute="trailing" secondItem="iQp-9a-KeJ" secondAttribute="trailing" id="9OW-bc-W1k"/>
+                            <constraint firstItem="iQp-9a-KeJ" firstAttribute="leading" secondItem="A88-Hj-biE" secondAttribute="leading" id="QJ0-XL-5On"/>
+                            <constraint firstItem="A88-Hj-biE" firstAttribute="bottom" secondItem="iQp-9a-KeJ" secondAttribute="bottom" id="Vzg-HF-gEM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh8-gb-6OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3057.971014492754" y="553.125"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zuj-89-zSf"/>
-        <segue reference="mfz-Dh-hVb"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="exit" width="32" height="32"/>
         <image name="ios-home" width="24" height="24"/>

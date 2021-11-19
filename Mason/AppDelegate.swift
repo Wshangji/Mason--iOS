@@ -11,7 +11,7 @@ import AmplifyPlugins
 
 struct quesList {
     static var ques1: String = "null"
-    static var ques2: String = "null"
+    static var ques2: String = ""
     static var ques3: String = "null"
     static var ques4: String = "null"
     static var ques5: String = "null"

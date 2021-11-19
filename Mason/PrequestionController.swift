@@ -196,24 +196,29 @@ class PrequestionController: UIViewController {
         }
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    @IBAction func submit(_ sender: Any) {
+        
         Amplify.DataStore.save(
             Perception(name: Amplify.Auth.getCurrentUser()?.username,
-                       gender: gender,
-                       race: race,
-                       ethnicity: eth,
-                       ses: ses,
-                       eigenstates: emp
-                      )
+                        gender: gender,
+                        race: race,
+                        ethnicity: eth,
+                        ses: ses,
+                        eigenstates: emp)
         ) {
-            switch $0 {
+        switch $0 {
             case .success:
                 print("Created a new post successfully")
             case .failure(let error):
-                print("Error creating post - \(error.localizedDescription)")
+                print("Error creating post \(error.localizedDescription)")
             }
         }
-        return true
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
     }
+    
     
 }
