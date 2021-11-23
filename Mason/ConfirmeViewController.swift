@@ -49,7 +49,7 @@ class ConfirmeViewController: UIViewController {
         
         let confirm = confirmLable.text ?? ""
         if confirm.isEmpty {
-            errorLable.text = "请输入验证码"
+            errorLable.text = "please enter verification code"
         }
         else {
             confirmSignUp(for: paramName, with: confirm)

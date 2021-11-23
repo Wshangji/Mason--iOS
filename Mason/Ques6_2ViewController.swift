@@ -33,4 +33,9 @@ class Ques6_2ViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return true
     }
+    
+    @IBAction func btn_back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
 }

@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                 self.flag = true
                 print("Sign in succeeded")
             case .failure(let error):
-                print("Sign in failed \(error)")
+                self.errorLabel.text = "Sign in failed \(error)"
             }
         }
     }
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text ?? ""
         if username.isEmpty || password.isEmpty {
             errorLabel.text = ""
-            errorLabel.text = "请输入用户名或密码"
+            errorLabel.text = "Please enter username or password"
         } else {
             errorLabel.text = ""
             signIn(username: username, password: password)

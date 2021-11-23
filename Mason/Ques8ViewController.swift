@@ -50,5 +50,10 @@ class Ques8ViewController: UIViewController {
         quesList.ques8_5 = label5.text ?? ""
         return true
     }
+    
+    @IBAction func btn_back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
 
 }

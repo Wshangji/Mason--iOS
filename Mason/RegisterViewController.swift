@@ -50,13 +50,13 @@ class RegisterViewController: UIViewController {
         let password = passwordTextField.text ?? ""
         let email = emailTextField.text ?? ""
         if username.isEmpty || password.isEmpty {
-            errorTable.text = "请输入用户名或密码"
+            errorTable.text = "Please enter username or password"
         }
         else if password != confirmpwdTextField.text {
-            errorTable.text = "密码不一致"
+            errorTable.text = "The twice importations of passwords are inconsistent"
         }
         else if email.isEmpty {
-            errorTable.text = "请输入邮箱"
+            errorTable.text = "Please enter email"
         }
         else {
             errorTable.text = ""

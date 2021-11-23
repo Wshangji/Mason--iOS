@@ -17,6 +17,8 @@ class Ques2ViewController: UIViewController {
     @IBOutlet weak var btn7: UIButton!
     @IBOutlet weak var btn8: UIButton!
     
+    var proes: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,30 +49,37 @@ class Ques2ViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if btn1.isSelected {
-            quesList.ques2 += btn1.currentTitle ?? ""
+            proes += btn1.currentTitle ?? ""
         }
         if btn2.isSelected {
-            quesList.ques2 += btn2.currentTitle ?? ""
+            proes += btn2.currentTitle ?? ""
         }
         if btn3.isSelected {
-            quesList.ques2 += btn3.currentTitle ?? ""
+            proes += btn3.currentTitle ?? ""
         }
         if btn4.isSelected {
-            quesList.ques2 += btn4.currentTitle ?? ""
+            proes += btn4.currentTitle ?? ""
         }
         if btn5.isSelected {
-            quesList.ques2 += btn5.currentTitle ?? ""
+            proes += btn5.currentTitle ?? ""
         }
         if btn6.isSelected {
-            quesList.ques2 += btn6.currentTitle ?? ""
+            proes += btn6.currentTitle ?? ""
         }
         if btn7.isSelected {
-            quesList.ques2 += btn7.currentTitle ?? ""
+            proes += btn7.currentTitle ?? ""
         }
         if btn8.isSelected {
-            quesList.ques2 += btn8.currentTitle ?? ""
+            proes += btn8.currentTitle ?? ""
         }
+        quesList.ques2 = proes
         return true
     }
+    
+    @IBAction func btn_back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
+    
     
 }

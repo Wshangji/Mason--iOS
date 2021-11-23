@@ -25,5 +25,10 @@ class Ques7ViewController: UIViewController {
         quesList.ques7_4 = input4.text ?? ""
         return true
     }
+    
+    @IBAction func btn_back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
 
 }
