@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Amplify
 
 class Ques6_2ViewController: UIViewController {
     @IBOutlet weak var btn_y: UIButton!
@@ -30,12 +31,34 @@ class Ques6_2ViewController: UIViewController {
             print("error")
         }
     }
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return true
+
+    @IBAction func onClick(_ sender: Any) {
+        Amplify.DataStore.query(Perception.self, byId: Amplify.Auth.getCurrentUser()!.userId) {
+            switch $0 {
+            case .success(let result):
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                if result?.ethnicity != "Not currently employed" {
+                    guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques7") as? Ques7ViewController else {  return }
+                    secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                    self.present(secondVC, animated: true, completion: nil)
+                } else {
+                    guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques8") as? Ques8ViewController else {  return }
+                    secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                    self.present(secondVC, animated: true, completion: nil)
+                }
+            case .failure(let error):
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques8") as? Ques8ViewController else {  return }
+                secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                self.present(secondVC, animated: true, completion: nil)
+                print("Error on query() for type Post - \(error.localizedDescription)")
+            }
+        }
     }
     
     @IBAction func btn_back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
 
     }
+    
 }

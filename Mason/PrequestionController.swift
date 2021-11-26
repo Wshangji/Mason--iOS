@@ -199,7 +199,8 @@ class PrequestionController: UIViewController {
     @IBAction func submit(_ sender: Any) {
         
         Amplify.DataStore.save(
-            Perception(name: Amplify.Auth.getCurrentUser()?.username,
+            Perception(id: Amplify.Auth.getCurrentUser()!.userId,
+                        name: Amplify.Auth.getCurrentUser()?.username,
                         gender: gender,
                         race: race,
                         ethnicity: eth,
