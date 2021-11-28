@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmpwdTextField: UITextField!
+    @IBOutlet weak var btn_next: UIButton!
     
     @IBOutlet weak var errorTable: UILabel!
     
@@ -22,6 +23,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btn_next.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        btn_next.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
+        
         // Do any additional setup after loading the view.
     }
     

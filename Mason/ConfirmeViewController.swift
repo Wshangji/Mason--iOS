@@ -11,6 +11,9 @@ import Amplify
 class ConfirmeViewController: UIViewController {
     @IBOutlet weak var confirmLable: UITextField!
     @IBOutlet weak var errorLable: UILabel!
+    @IBOutlet weak var regeser: UIButton!
+    
+    
     var paramName:String = ""
     var paramPassword:String = ""
     var is_flag:Bool = false
@@ -18,6 +21,8 @@ class ConfirmeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        regeser.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        regeser.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
     

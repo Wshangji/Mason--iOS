@@ -10,6 +10,8 @@ import Amplify
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var regester: UIButton!
+    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,7 +29,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
                 
+        regester.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
 
         // Do any additional setup after loading the view.
     }

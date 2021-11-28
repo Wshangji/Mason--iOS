@@ -11,9 +11,12 @@ import Amplify
 class Ques6_1ViewController: UIViewController {
     @IBOutlet weak var btn_yes: UIButton!
     @IBOutlet weak var btn_no: UIButton!
+    @IBOutlet weak var btn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
 
         // Do any additional setup after loading the view.
     }

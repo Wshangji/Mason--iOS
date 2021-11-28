@@ -16,11 +16,15 @@ class Ques2ViewController: UIViewController {
     @IBOutlet weak var btn6: UIButton!
     @IBOutlet weak var btn7: UIButton!
     @IBOutlet weak var btn8: UIButton!
+    @IBOutlet weak var btn: UIButton!
     
     var proes: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
