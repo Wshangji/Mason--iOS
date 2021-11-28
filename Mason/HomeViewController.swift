@@ -8,10 +8,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var btn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         // Do any additional setup after loading the view.
     }
     
