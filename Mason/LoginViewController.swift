@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     var flag: Bool = false
     
+    // 加载时判断是否已经是登录状态
     override func loadView() {
         super.loadView()
         if (Amplify.Auth.getCurrentUser() != nil) {
@@ -27,16 +28,16 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // 改变按钮样式
     override func viewDidLoad() {
         super.viewDidLoad()
         btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
                 
         regester.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    // AWS登录方法
     func signIn(username: String, password: String) {
         Amplify.Auth.signIn(username: username, password: password) { result in
             switch result {
@@ -49,23 +50,28 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //登录按钮监听事件
     @IBAction func login_btn(_ sender: Any) {
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        if username.isEmpty || password.isEmpty {
-            errorLabel.text = ""
-            errorLabel.text = "Please enter username or password"
+        
+        if username.isEmpty {
+            errorLabel.text = "Please enter username"
+        } else if password.isEmpty {
+            errorLabel.text = "Please enter password"
         } else {
-            errorLabel.text = ""
+            // 调用登录方法
             signIn(username: username, password: password)
+            // 登录成功
             if flag {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
                 secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
                 self.present(secondVC, animated: true, completion: nil)
+            } else {
+                errorLabel.text = "Login failed"
             }
         }
     }
-    
 
 }

@@ -46,11 +46,6 @@ class Ques6_1ViewController: UIViewController {
         }
     }
     
-    @IBAction func btn_back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
-    }
-    
     func find(){
         Amplify.DataStore.query(Perception.self, byId: Amplify.Auth.getCurrentUser()!.userId) {
             switch $0 {

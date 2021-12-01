@@ -59,9 +59,4 @@ class Ques6_2ViewController: UIViewController {
         }
     }
     
-    @IBAction func btn_back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
-    }
-    
 }

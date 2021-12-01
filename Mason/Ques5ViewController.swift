@@ -112,10 +112,5 @@ class Ques5ViewController: UIViewController {
         }
         return true
     }
-    
-    @IBAction func btn_back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-
-    }
 
 }

@@ -10,11 +10,17 @@ import Amplify
 
 class PerContextViewController: UIViewController {
     var is_flag:Bool = false
+    @IBOutlet weak var btn_yes: UIButton!
+    @IBOutlet weak var btn_no: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btn_yes.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
+        
+        btn_no.setTitleColor(UIColor.black, for: .normal)
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func context_yes(_ sender: Any) {

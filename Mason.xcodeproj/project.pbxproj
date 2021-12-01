@@ -10,6 +10,7 @@
 		1C0B314B73EBE3DF136B3312 /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D542921CF767CB7D3DA4181 /* User+Schema.swift */; };
 		567FBAE80AD2EED1F0D4E52E /* Perception.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A095FE13ADCA830366EEBD /* Perception.swift */; };
 		63BD69E62E51911CC569212A /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CFF169826CC4D23A714FC /* Questions.swift */; };
+		740ABCDF275719F20008DB4C /* VerifyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740ABCDE275719F20008DB4C /* VerifyUtil.swift */; };
 		7457128B273E7F2000432F90 /* Ques3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128A273E7F2000432F90 /* Ques3ViewController.swift */; };
 		7457128D273E7F2C00432F90 /* Ques4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128C273E7F2C00432F90 /* Ques4ViewController.swift */; };
 		74664FE727464873009A0B82 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74664FE627464873009A0B82 /* FinishViewController.swift */; };
@@ -69,6 +70,7 @@
 		1698652BFD727C984EED5559 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		6BF300F3621D70AA9D4A1031 /* Questions+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Questions+Schema.swift"; path = "amplify/generated/models/Questions+Schema.swift"; sourceTree = "<group>"; };
+		740ABCDE275719F20008DB4C /* VerifyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUtil.swift; sourceTree = "<group>"; };
 		7457128A273E7F2000432F90 /* Ques3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques3ViewController.swift; sourceTree = "<group>"; };
 		7457128C273E7F2C00432F90 /* Ques4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques4ViewController.swift; sourceTree = "<group>"; };
 		74664FE627464873009A0B82 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				74899E48273D7051000E3F1F /* PrequestionController.swift */,
 				74899E4C273D8571000E3F1F /* TapBarController.swift */,
 				749AF4542730D5BE00D32AEA /* Main.storyboard */,
+				740ABCDE275719F20008DB4C /* VerifyUtil.swift */,
 				74C7208A27474756009425AA /* UserViewController.swift */,
 				74C720882746C1CC009425AA /* PerContextViewController.swift */,
 				74664FE627464873009A0B82 /* FinishViewController.swift */,
@@ -455,6 +458,7 @@
 				74E83CD42742087B005CAA3F /* Ques6_2ViewController.swift in Sources */,
 				74E83CDC2745D950005CAA3F /* Ques9ViewController.swift in Sources */,
 				7457128D273E7F2C00432F90 /* Ques4ViewController.swift in Sources */,
+				740ABCDF275719F20008DB4C /* VerifyUtil.swift in Sources */,
 				567FBAE80AD2EED1F0D4E52E /* Perception.swift in Sources */,
 				74E83CD82745D64A005CAA3F /* Ques8ViewController.swift in Sources */,
 				E181C92A47F938FFF9B04F27 /* Questions+Schema.swift in Sources */,
