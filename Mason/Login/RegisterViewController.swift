@@ -75,7 +75,6 @@ class RegisterViewController: UIViewController {
         guard let secondVC = storyboard.instantiateViewController(withIdentifier: "confirme") as? ConfirmeViewController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         secondVC.paramName = usernameTextField.text ?? ""
-        secondVC.paramPassword = passwordTextField.text ?? ""
         self.present(secondVC, animated: true, completion: nil)
     }
     

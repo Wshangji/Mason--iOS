@@ -2421,7 +2421,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-w2-ucn">
                                                 <rect key="frame" x="20" y="30" width="374" height="1055"/>
-                                                <string key="text">PARTICIPATION: 
+                                                <mutableString key="text">PARTICIPATION: 
 
 Your participation is voluntary, and you can refuse to answer questions in weekly surveys or
 drop out at any time. We won’t associate any of your answers with you specifically. There are no costs or foreseeable risks for you to take part in this study. You will receive $20 for the completion of 8 weeks’ worth of surveys. Upon completing 8 weeks of surveys, you will be given $2/week for continued participation in the app. You can earn a maximum of $36 for completing each weekly survey. Note that you must reach 8 weeks of survey completions in order to receive any compensation. All payouts will be distributed in Amazon e-gift cards. Under the U.S. federal tax law, you may have individual responsibilities for disclosing the dollar value of the incentive received on this study. 
@@ -2429,7 +2429,7 @@ drop out at any time. We won’t associate any of your answers with you specific
 ELIGIBILITY: 
 
 You are considered eligible to participate in this study if you: 
- - Are 18 years of age or older \n
+ - Are 18 years of age or older 
  - Are a current undergraduate student at George Mason University 
 
 CONTACT: 
@@ -2438,7 +2438,7 @@ This survey is being conducted by Lawrence Cheskin, MD and Alison Cuellar, PhD, 
 
 CONSENT: 
 
-I have read this form, all my questions have been answered by the research staff, and I agree to participate in this study. By selecting “yes,” I indicate my eligibility and consent to participate.</string>
+I have read this form, all my questions have been answered by the research staff, and I agree to participate in this study. By selecting “yes,” I indicate my eligibility and consent to participate.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

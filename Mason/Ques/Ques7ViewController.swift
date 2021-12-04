@@ -24,7 +24,7 @@ class Ques7ViewController: UIViewController {
     let dropDown2 = DropDown()
     let dropDown3 = DropDown()
     let dropDown4 = DropDown()
-    let timeValues = ["one time", "two time", "three times", "four times", "five times", "six times", "seven times", "more than seven times"]
+    let timeValues = ["one time", "two times", "three times", "four times", "five times", "six times", "seven times", "more than seven times"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

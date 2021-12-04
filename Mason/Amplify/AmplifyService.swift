@@ -31,7 +31,7 @@ func signUp(username: String, password: String, email: String, completion: @esca
         case .success(let signUpResult):
             if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
                 print("Delivery details \(String(describing: deliveryDetails))")
-                completion(false)
+                completion(true)
             } else {
                 print("SignUp Complete")
                 completion(true)

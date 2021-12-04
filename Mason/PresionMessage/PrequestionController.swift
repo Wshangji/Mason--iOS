@@ -215,6 +215,7 @@ class PrequestionController: UIViewController {
             if flag {
                 DispatchQueue.main.async {
                     self.jumpHome()
+                    
                 }
             } else {
                 

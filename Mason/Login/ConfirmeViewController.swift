@@ -15,8 +15,6 @@ class ConfirmeViewController: UIViewController {
     
     
     var paramName:String = ""
-    var paramPassword:String = ""
-    var is_flag:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +50,7 @@ class ConfirmeViewController: UIViewController {
     
     func jump() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "PerContext") as? PerContextViewController else {  return }
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "login") as? LoginViewController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(secondVC, animated: true, completion: nil)
     }

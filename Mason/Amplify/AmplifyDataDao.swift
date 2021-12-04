@@ -50,6 +50,18 @@ func saveQues(questions :Questions, completion: @escaping(Bool) -> Void?) {
     }
 }
 
+// 清除数据
+func dataClear() {
+    Amplify.DataStore.clear { result in
+        switch result {
+        case .success:
+            print("DataStore cleared")
+        case .failure(let error):
+            print("Error clearing DataStore: \(error)")
+        }
+    }
+}
+
 
 // 根据ID查询用户
 func quaryUserbyID(userid :String, completion: @escaping(Bool) -> Void?) {
