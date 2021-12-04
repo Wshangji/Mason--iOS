@@ -17,6 +17,7 @@
 		746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2C2733D2F600D36D20 /* awsconfiguration.json */; };
 		746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */; };
 		7476F11F27325E7800132908 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476F11E27325E7800132908 /* HomeViewController.swift */; };
+		747CA4B8275A800900F8B864 /* AmplifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747CA4B7275A800900F8B864 /* AmplifyService.swift */; };
 		74899E49273D7051000E3F1F /* PrequestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E48273D7051000E3F1F /* PrequestionController.swift */; };
 		74899E4D273D8571000E3F1F /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E4C273D8571000E3F1F /* TapBarController.swift */; };
 		74899E51273E386D000E3F1F /* Ques1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E50273E386D000E3F1F /* Ques1ViewController.swift */; };
@@ -77,6 +78,7 @@
 		746C4D2C2733D2F600D36D20 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		7476F11E27325E7800132908 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		747CA4B7275A800900F8B864 /* AmplifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyService.swift; sourceTree = "<group>"; };
 		74899E48273D7051000E3F1F /* PrequestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrequestionController.swift; sourceTree = "<group>"; };
 		74899E4C273D8571000E3F1F /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		74899E50273E386D000E3F1F /* Ques1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques1ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 			name = AmplifyModels;
 			sourceTree = "<group>";
 		};
+		743AA826275AFFC00089D8EB /* Amplify */ = {
+			isa = PBXGroup;
+			children = (
+				747CA4B7275A800900F8B864 /* AmplifyService.swift */,
+			);
+			path = Amplify;
+			sourceTree = "<group>";
+		};
 		749AF4422730D5BE00D32AEA = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +209,7 @@
 		749AF44D2730D5BE00D32AEA /* Mason */ = {
 			isa = PBXGroup;
 			children = (
+				743AA826275AFFC00089D8EB /* Amplify */,
 				746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */,
 				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
 				749AF44E2730D5BE00D32AEA /* AppDelegate.swift */,
@@ -420,13 +431,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -452,6 +459,7 @@
 				7492A2C627319E7800DCFE27 /* LoginViewController.swift in Sources */,
 				7476F11F27325E7800132908 /* HomeViewController.swift in Sources */,
 				74899E53273E3913000E3F1F /* Ques2ViewController.swift in Sources */,
+				747CA4B8275A800900F8B864 /* AmplifyService.swift in Sources */,
 				749AF4512730D5BE00D32AEA /* SceneDelegate.swift in Sources */,
 				90700FC5826BBD17D8710019 /* AmplifyModels.swift in Sources */,
 				A6B64FF4298B2D1826145B83 /* Perception+Schema.swift in Sources */,

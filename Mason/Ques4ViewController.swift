@@ -8,7 +8,6 @@
 import UIKit
 
 class Ques4ViewController: UIViewController {
-    @IBOutlet weak var input: UITextField!
     @IBOutlet weak var btn: UIButton!
     
     override func viewDidLoad() {
@@ -19,7 +18,7 @@ class Ques4ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        quesList.ques4 = input.text ?? ""
+//        quesList.ques4 = input.text ?? ""
         return true
     }
     

@@ -15,7 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var flag: Bool = false
     
     // 加载时判断是否已经是登录状态
     override func loadView() {
@@ -37,19 +36,6 @@ class LoginViewController: UIViewController {
         regester.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
     }
     
-    // AWS登录方法
-    func signIn(username: String, password: String) {
-        Amplify.Auth.signIn(username: username, password: password) { result in
-            switch result {
-            case .success:
-                self.flag = true
-                print("Sign in succeeded")
-            case .failure(let error):
-                self.errorLabel.text = "Sign in failed \(error)"
-            }
-        }
-    }
-    
     //登录按钮监听事件
     @IBAction func login_btn(_ sender: Any) {
         let username = usernameTextField.text ?? ""
@@ -61,17 +47,25 @@ class LoginViewController: UIViewController {
             errorLabel.text = "Please enter password"
         } else {
             // 调用登录方法
-            signIn(username: username, password: password)
-            // 登录成功
-            if flag {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
-                secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-                self.present(secondVC, animated: true, completion: nil)
-            } else {
-                errorLabel.text = "Login failed"
-            }
+            signIn(username: username, password: password, completion: {
+                (flag) -> Void in
+                // 登录成功
+                if flag {
+                    DispatchQueue.main.async {
+                        self.jump()
+                    }
+                } else {
+                    self.errorLabel.text = "Login failed"
+                }
+            })
         }
+    }
+    
+    func jump() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
     }
 
 }

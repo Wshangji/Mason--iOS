@@ -34,6 +34,7 @@ PODS:
   - AWSPluginsCore (1.15.4):
     - Amplify (= 1.15.4)
     - AWSCore (~> 2.26.1)
+  - DropDown (2.3.13)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
+  - DropDown
 
 SPEC REPOS:
   trunk:
@@ -56,6 +58,7 @@ SPEC REPOS:
     - AWSCore
     - AWSMobileClient
     - AWSPluginsCore
+    - DropDown
     - SQLite.swift
     - Starscream
 
@@ -69,9 +72,10 @@ SPEC CHECKSUMS:
   AWSCore: 7077ecff07ae3b184e65e2fa9855f6da048f9ae7
   AWSMobileClient: 32f38bdb37ee29b2ac2c81739054f95bf3265f66
   AWSPluginsCore: 1065e0896d634788d059667a840e4dbf928f7ac3
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: d6c6d2a10fd4a3424d3a5443a98c763672f0945e
+PODFILE CHECKSUM: 4bebf30ce55bad1bc84e50022c1d04773532fca6
 
 COCOAPODS: 1.11.2

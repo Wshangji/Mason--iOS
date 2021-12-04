@@ -7,4 +7,5 @@ target 'Mason' do
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
   pod 'AmplifyPlugins/AWSDataStorePlugin'
   pod 'AmplifyPlugins/AWSAPIPlugin'
+  pod 'DropDown'
 end
