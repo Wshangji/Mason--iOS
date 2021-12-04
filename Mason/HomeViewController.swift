@@ -7,40 +7,33 @@
 
 import UIKit
 import Amplify
+import SwiftUI
+import UserNotifications
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var btn: UIButton!
     
+    
     override func loadView() {
         super.loadView()
         
-        Amplify.DataStore.query(User.self, byId: Amplify.Auth.getCurrentUser()!.userId) {
-            switch $0 {
-            case .success(let result):
-                let flag = result?.isAgree ?? false
-                if flag {
-                } else {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    guard let secondVC = storyboard.instantiateViewController(withIdentifier: "PerContext") as? PerContextViewController else {  return }
-                    secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-                    self.present(secondVC, animated: true, completion: nil)
+        quaryUserbyID(userid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+            (flag) -> Void in
+            if flag {
+            } else {
+                DispatchQueue.main.async {
+                    self.jumpPerMessage()
                 }
-            case .failure(let error):
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                guard let secondVC = storyboard.instantiateViewController(withIdentifier: "PerContext") as? PerContextViewController else {  return }
-                secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-                self.present(secondVC, animated: true, completion: nil)
-                
-                print("Error on query() for type Post - \(error.localizedDescription)")
             }
-        }
+        })
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
     }
@@ -49,9 +42,17 @@ class HomeViewController: UIViewController {
         label.text = String(Int(slider.value))
     }
     
+    // 跳转Segue判断
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         quesList.ques1 = label.text ?? ""
         return true
+    }
+    
+    func jumpPerMessage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "PerContext") as? PerContextViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
     }
 
 }

@@ -88,6 +88,8 @@ class Ques5ViewController: UIViewController {
             print("erroe")
         }
     }
+    
+    // 跳转判断
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if btn1.isSelected {
             quesList.ques5 = btn1.currentTitle ?? ""

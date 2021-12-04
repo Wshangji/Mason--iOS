@@ -201,28 +201,34 @@ class PrequestionController: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         
-        Amplify.DataStore.save(
-            Perception(id: Amplify.Auth.getCurrentUser()!.userId,
-                        name: Amplify.Auth.getCurrentUser()?.username,
-                        gender: gender,
-                        race: race,
-                        ethnicity: eth,
-                        ses: ses,
-                        eigenstates: emp)
-        ) {
-        switch $0 {
-            case .success:
-                print("Created a new post successfully")
-            case .failure(let error):
-                print("Error creating post \(error.localizedDescription)")
+        savePerson(per:
+                    Perception(id: Amplify.Auth.getCurrentUser()!.userId,
+                                   name: Amplify.Auth.getCurrentUser()!.username,
+                                   gender: gender,
+                                   race: race,
+                                   ethnicity: eth,
+                                   ses: ses,
+                                   eigenstates: emp),
+                   completion: {
+            (flag) -> Void in
+            
+            if flag {
+                DispatchQueue.main.async {
+                    self.jumpHome()
+                }
+            } else {
+                
             }
-        }
-        
+            
+        })
+    }
+    
+    // 跳转至主页
+    func jumpHome() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(secondVC, animated: true, completion: nil)
     }
-    
-    
+   
 }

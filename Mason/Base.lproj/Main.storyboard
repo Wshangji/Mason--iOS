@@ -1209,9 +1209,10 @@
                                         <state key="selected" image="ios-radio-button-on"/>
                                         <connections>
                                             <action selector="btnRadio:" destination="TqM-aX-f4a" eventType="touchUpInside" id="6uS-kr-3nD"/>
+                                            <action selector="radioBtn:" destination="eUw-yx-akI" eventType="touchUpInside" id="ChP-Lt-25M"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-Bh-wDp">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-Bh-wDp">
                                         <rect key="frame" x="0.0" y="117" width="122" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1221,6 +1222,7 @@
                                         <state key="selected" image="ios-radio-button-on"/>
                                         <connections>
                                             <action selector="btnRadio:" destination="TqM-aX-f4a" eventType="touchUpInside" id="rsq-XU-bli"/>
+                                            <action selector="radioBtn:" destination="eUw-yx-akI" eventType="touchUpInside" id="IZS-dM-Qxf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1253,6 +1255,8 @@
                     <navigationItem key="navigationItem" id="OSX-lb-r2K"/>
                     <connections>
                         <outlet property="btn" destination="6Rn-4H-q5w" id="atd-5m-OPy"/>
+                        <outlet property="btn_1" destination="SM7-ng-Z4J" id="ASM-ge-neR"/>
+                        <outlet property="btn_2" destination="t8p-Bh-wDp" id="RfC-pe-h7i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONQ-Cx-1wU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
