@@ -9,5 +9,7 @@ ${BUILT_PRODUCTS_DIR}/Amplify/Amplify.framework
 ${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework
 ${BUILT_PRODUCTS_DIR}/AppSyncRealTimeClient/AppSyncRealTimeClient.framework
 ${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/JFPopup/JFPopup.framework
+${BUILT_PRODUCTS_DIR}/JRBaseKit/JRBaseKit.framework
 ${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
 ${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework

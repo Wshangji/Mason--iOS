@@ -35,6 +35,9 @@ PODS:
     - Amplify (= 1.15.4)
     - AWSCore (~> 2.26.1)
   - DropDown (2.3.13)
+  - JFPopup (1.4.0):
+    - JRBaseKit (~> 0.9.0)
+  - JRBaseKit (0.9.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
@@ -46,6 +49,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
   - DropDown
+  - JFPopup
 
 SPEC REPOS:
   trunk:
@@ -59,6 +63,8 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSPluginsCore
     - DropDown
+    - JFPopup
+    - JRBaseKit
     - SQLite.swift
     - Starscream
 
@@ -73,9 +79,11 @@ SPEC CHECKSUMS:
   AWSMobileClient: 32f38bdb37ee29b2ac2c81739054f95bf3265f66
   AWSPluginsCore: 1065e0896d634788d059667a840e4dbf928f7ac3
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  JFPopup: ec02a2c1574d90cb54d182aec9213034735da70e
+  JRBaseKit: f4a95149f6b68417348e63065d384f22501cf2ce
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 4bebf30ce55bad1bc84e50022c1d04773532fca6
+PODFILE CHECKSUM: 4755d2a7e5f3837c6015f6c29a69058d642be222
 
 COCOAPODS: 1.11.2

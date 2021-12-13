@@ -9,6 +9,7 @@ import UIKit
 import Amplify
 import SwiftUI
 import UserNotifications
+import JFPopup
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
@@ -45,7 +46,21 @@ class HomeViewController: UIViewController {
     // 跳转Segue判断
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         quesList.ques1 = label.text ?? ""
-        return true
+        if quesList.ques1.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("我是Title 和 SubTitle可以二选一,单个按钮"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
     
     func jumpPerMessage() {

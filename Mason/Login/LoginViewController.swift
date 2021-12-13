@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplify
+import JFPopup
 
 class LoginViewController: UIViewController {
 
@@ -50,18 +51,23 @@ class LoginViewController: UIViewController {
         } else if password.isEmpty {
             errorLabel.text = "Please enter password"
         } else {
-            // 调用登录方法
-            signIn(username: username, password: password, completion: {
-                (flag) -> Void in
-                // 登录成功
-                if flag {
-                    DispatchQueue.main.async {
-                        self.jump()
+            JFPopupView.popup.loading(hit: "Loading")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        // 调用登录方法
+                        signIn(username: username, password: password, completion: {
+                            (flag) -> Void in
+                            // 登录成功
+                            if flag {
+                                JFPopupView.popup.hideLoading()
+                                DispatchQueue.main.async {
+                                    self.jump()
+                                }
+                            } else {
+                                JFPopupView.popup.hideLoading()
+                                self.errorLabel.text = "Login failed"
+                            }
+                        })
                     }
-                } else {
-                    self.errorLabel.text = "Login failed"
-                }
-            })
         }
     }
     

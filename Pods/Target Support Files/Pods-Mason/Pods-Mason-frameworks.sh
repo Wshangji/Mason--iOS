@@ -186,6 +186,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AppSyncRealTimeClient/AppSyncRealTimeClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JFPopup/JFPopup.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JRBaseKit/JRBaseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi
@@ -200,6 +202,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AmplifyPlugins/AmplifyPlugins.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AppSyncRealTimeClient/AppSyncRealTimeClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JFPopup/JFPopup.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JRBaseKit/JRBaseKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi

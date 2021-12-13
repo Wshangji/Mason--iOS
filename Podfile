@@ -8,4 +8,5 @@ target 'Mason' do
   pod 'AmplifyPlugins/AWSDataStorePlugin'
   pod 'AmplifyPlugins/AWSAPIPlugin'
   pod 'DropDown'
+  pod 'JFPopup'
 end
