@@ -13,6 +13,7 @@
 		740ABCDF275719F20008DB4C /* VerifyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740ABCDE275719F20008DB4C /* VerifyUtil.swift */; };
 		743AA82D275B5B720089D8EB /* AmplifyDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AA82C275B5B720089D8EB /* AmplifyDataDao.swift */; };
 		743AA82F275B741C0089D8EB /* NotifitionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AA82E275B741C0089D8EB /* NotifitionUtil.swift */; };
+		743B026A275D154A008AC0ED /* SystemUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B0269275D154A008AC0ED /* SystemUtil.swift */; };
 		7457128B273E7F2000432F90 /* Ques3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128A273E7F2000432F90 /* Ques3ViewController.swift */; };
 		7457128D273E7F2C00432F90 /* Ques4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7457128C273E7F2C00432F90 /* Ques4ViewController.swift */; };
 		74664FE727464873009A0B82 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74664FE627464873009A0B82 /* FinishViewController.swift */; };
@@ -75,6 +76,7 @@
 		740ABCDE275719F20008DB4C /* VerifyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUtil.swift; sourceTree = "<group>"; };
 		743AA82C275B5B720089D8EB /* AmplifyDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyDataDao.swift; sourceTree = "<group>"; };
 		743AA82E275B741C0089D8EB /* NotifitionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifitionUtil.swift; sourceTree = "<group>"; };
+		743B0269275D154A008AC0ED /* SystemUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUtil.swift; sourceTree = "<group>"; };
 		7457128A273E7F2000432F90 /* Ques3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques3ViewController.swift; sourceTree = "<group>"; };
 		7457128C273E7F2C00432F90 /* Ques4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques4ViewController.swift; sourceTree = "<group>"; };
 		74664FE627464873009A0B82 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				740ABCDE275719F20008DB4C /* VerifyUtil.swift */,
 				743AA82E275B741C0089D8EB /* NotifitionUtil.swift */,
+				743B0269275D154A008AC0ED /* SystemUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				74899E53273E3913000E3F1F /* Ques2ViewController.swift in Sources */,
 				747CA4B8275A800900F8B864 /* AmplifyService.swift in Sources */,
 				749AF4512730D5BE00D32AEA /* SceneDelegate.swift in Sources */,
+				743B026A275D154A008AC0ED /* SystemUtil.swift in Sources */,
 				90700FC5826BBD17D8710019 /* AmplifyModels.swift in Sources */,
 				743AA82F275B741C0089D8EB /* NotifitionUtil.swift in Sources */,
 				A6B64FF4298B2D1826145B83 /* Perception+Schema.swift in Sources */,
@@ -699,8 +703,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B74D6LP9GZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = CMLZ78T85W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mason/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gradwyn;
@@ -709,12 +713,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -730,8 +734,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B74D6LP9GZ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = CMLZ78T85W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mason/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Gradwyn;
@@ -740,12 +744,12 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -30,6 +30,10 @@ class LoginViewController: UIViewController {
     // 改变按钮样式
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //隐藏键盘,只要有键盘弹出,点击空白出就会隐藏键盘
+        self.hideKeyboardWhenTappedAround()
+        
         btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
                 

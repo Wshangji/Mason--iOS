@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9Z-SxJ">
-                                <rect key="frame" x="55" y="342" width="304" height="212"/>
+                                <rect key="frame" x="55" y="382" width="304" height="212"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-bP-RQ8">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="34"/>
@@ -77,12 +77,20 @@
                                     <constraint firstAttribute="trailing" secondItem="BWo-ex-pHb" secondAttribute="trailing" id="oBg-DI-k99"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradwyn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ths-Jg-Kjd">
+                                <rect key="frame" x="143.5" y="295.5" width="127.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ths-Jg-Kjd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-128" id="FSR-88-lnS"/>
                             <constraint firstItem="Qiw-9Z-SxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="H6v-tj-EWn"/>
-                            <constraint firstItem="Qiw-9Z-SxJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l3c-gt-lAS"/>
+                            <constraint firstItem="Ths-Jg-Kjd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MHT-MQ-SJN"/>
+                            <constraint firstItem="Qiw-9Z-SxJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="l3c-gt-lAS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qiw-9Z-SxJ" secondAttribute="trailing" constant="55" id="np0-Nq-0Sz"/>
                         </constraints>
                     </view>
@@ -108,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8bP-Lv-pg1">
-                                <rect key="frame" x="55" y="244" width="304" height="320"/>
+                                <rect key="frame" x="55" y="312" width="304" height="320"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4du-2F-iGn">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="34"/>
@@ -181,12 +189,20 @@
                                     <constraint firstAttribute="trailing" secondItem="AXt-Kn-rdw" secondAttribute="trailing" id="rMF-b1-r6O"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradwyn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-iH-5aX">
+                                <rect key="frame" x="143.5" y="225.5" width="127.5" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d9H-qK-C7q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lm9-ie-11Q" firstAttribute="centerY" secondItem="d9H-qK-C7q" secondAttribute="centerY" constant="-30" id="GXe-lo-UxQ"/>
+                            <constraint firstItem="3tI-iH-5aX" firstAttribute="centerX" secondItem="OlA-24-8wW" secondAttribute="centerX" id="6yF-qD-GBT"/>
+                            <constraint firstItem="lm9-ie-11Q" firstAttribute="centerY" secondItem="d9H-qK-C7q" secondAttribute="centerY" constant="38" id="GXe-lo-UxQ"/>
                             <constraint firstItem="8bP-Lv-pg1" firstAttribute="leading" secondItem="d9H-qK-C7q" secondAttribute="leading" constant="55" id="LkT-pT-DVk"/>
+                            <constraint firstItem="3tI-iH-5aX" firstAttribute="centerY" secondItem="OlA-24-8wW" secondAttribute="centerY" constant="-198" id="lft-6e-tmY"/>
                             <constraint firstItem="d9H-qK-C7q" firstAttribute="trailing" secondItem="8bP-Lv-pg1" secondAttribute="trailing" constant="55" id="uhu-q9-R6M"/>
                         </constraints>
                     </view>
@@ -526,16 +542,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="c3I-mP-rld">
-                                                <rect key="frame" x="20" y="20" width="374" height="221"/>
+                                                <rect key="frame" x="20" y="20" width="374" height="278"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender Options：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23w-tX-oS4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your current gender identity, even if it is different than what is on your birth certificate?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23w-tX-oS4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="86"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-IH-qvt">
-                                                        <rect key="frame" x="0.0" y="45" width="71" height="32"/>
+                                                        <rect key="frame" x="0.0" y="102" width="71" height="32"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Male" image="ios-radio-button-off">
@@ -550,7 +566,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-U2-y40">
-                                                        <rect key="frame" x="0.0" y="93" width="91" height="32"/>
+                                                        <rect key="frame" x="0.0" y="150" width="91" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Female" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -561,7 +577,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-Dn-LE5">
-                                                        <rect key="frame" x="0.0" y="141" width="353" height="32"/>
+                                                        <rect key="frame" x="0.0" y="198" width="353" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="I do not identify as either male or female" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -572,7 +588,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-wc-1Bf">
-                                                        <rect key="frame" x="0.0" y="189" width="156" height="32"/>
+                                                        <rect key="frame" x="0.0" y="246" width="156" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="I’m not sure yet" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -585,10 +601,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-v7-sLR">
-                                                <rect key="frame" x="20" y="279" width="374" height="269"/>
+                                                <rect key="frame" x="20" y="336" width="374" height="269"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race Options：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aA-z3-3c1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your race?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aA-z3-3c1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="190.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -654,16 +670,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-7a-buK">
-                                                <rect key="frame" x="20" y="586" width="374" height="173"/>
+                                                <rect key="frame" x="20" y="643" width="374" height="201.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethnicity Options：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uz-jf-ORd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="201" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you consider your ethnicity to be?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uz-jf-ORd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="57.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shD-bU-msm">
-                                                        <rect key="frame" x="0.0" y="45" width="177" height="32"/>
+                                                        <rect key="frame" x="0.0" y="73.5" width="177" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Hispanic or Latino" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -674,7 +690,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-qI-t9c">
-                                                        <rect key="frame" x="0.0" y="93" width="218" height="32"/>
+                                                        <rect key="frame" x="0.0" y="121.5" width="218" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="NOT Hispanic or Latino" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -685,7 +701,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if3-2M-m8G">
-                                                        <rect key="frame" x="0.0" y="141" width="221" height="32"/>
+                                                        <rect key="frame" x="0.0" y="169.5" width="221" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Unknown/Not Reported" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -698,16 +714,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rwY-5M-jFB">
-                                                <rect key="frame" x="20" y="797" width="374" height="221"/>
+                                                <rect key="frame" x="20" y="882.5" width="374" height="249.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SES Options：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-Sg-d59">
-                                                        <rect key="frame" x="0.0" y="0.0" width="154" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much money does your family have?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvy-Sg-d59">
+                                                        <rect key="frame" x="0.0" y="0.0" width="298.5" height="57.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-mi-jjP">
-                                                        <rect key="frame" x="0.0" y="45" width="261" height="32"/>
+                                                        <rect key="frame" x="0.0" y="73.5" width="261" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Not enough money to get by" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -718,7 +734,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tep-Ob-7eS">
-                                                        <rect key="frame" x="0.0" y="93" width="266" height="32"/>
+                                                        <rect key="frame" x="0.0" y="121.5" width="266" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Just enough money to get by" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -729,7 +745,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LiR-rY-fEc">
-                                                        <rect key="frame" x="0.0" y="141" width="374" height="32"/>
+                                                        <rect key="frame" x="0.0" y="169.5" width="374" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="We only have to worry about money for fun and extras" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -740,7 +756,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="o6d-YA-RGE">
-                                                        <rect key="frame" x="0.0" y="189" width="330" height="32"/>
+                                                        <rect key="frame" x="0.0" y="217.5" width="330" height="32"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="We never have to worry about money" image="ios-radio-button-off">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -753,10 +769,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="m85-3y-eQ8">
-                                                <rect key="frame" x="20" y="1056" width="374" height="173"/>
+                                                <rect key="frame" x="20" y="1170" width="374" height="173"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment Status Options：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xud-7X-eXW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="312.5" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your employment status?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xud-7X-eXW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342.5" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -797,7 +813,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as8-7f-hYX">
-                                                <rect key="frame" x="82" y="1279" width="250" height="39"/>
+                                                <rect key="frame" x="82" y="1393" width="250" height="39"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -908,7 +924,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djd-Q5-0nd">
-                                <rect key="frame" x="10" y="708.5" width="394" height="79.5"/>
+                                <rect key="frame" x="10" y="648.5" width="394" height="79.5"/>
                                 <string key="text">For questions or concerns about this study or your rights as a participant, please contact Dr. Lawrence Cheskin, PI, at lcheskin@gmu.edu. Our IRB # is 1773164-1</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -919,7 +935,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Djd-Q5-0nd" firstAttribute="centerX" secondItem="dOi-ZJ-Jen" secondAttribute="centerX" id="238-fw-9cl"/>
-                            <constraint firstItem="Djd-Q5-0nd" firstAttribute="centerY" secondItem="dOi-ZJ-Jen" secondAttribute="centerY" constant="300" id="9Hh-N6-JXQ"/>
+                            <constraint firstItem="Djd-Q5-0nd" firstAttribute="centerY" secondItem="dOi-ZJ-Jen" secondAttribute="centerY" constant="240" id="9Hh-N6-JXQ"/>
                             <constraint firstItem="Qdw-7y-Krh" firstAttribute="centerX" secondItem="dOi-ZJ-Jen" secondAttribute="centerX" id="EIo-YG-C8s"/>
                             <constraint firstItem="Djd-Q5-0nd" firstAttribute="leading" secondItem="PbR-Qp-t3h" secondAttribute="leading" constant="10" id="Tlo-am-6hH"/>
                             <constraint firstAttribute="trailing" secondItem="Djd-Q5-0nd" secondAttribute="trailing" constant="10" id="Y8w-br-mV8"/>
@@ -2417,11 +2433,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-Lq-sob">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyA-w2-ucn">
                                                 <rect key="frame" x="20" y="30" width="374" height="1055"/>
-                                                <mutableString key="text">PARTICIPATION: 
+                                                <string key="text">PARTICIPATION: 
 
 Your participation is voluntary, and you can refuse to answer questions in weekly surveys or
 drop out at any time. We won’t associate any of your answers with you specifically. There are no costs or foreseeable risks for you to take part in this study. You will receive $20 for the completion of 8 weeks’ worth of surveys. Upon completing 8 weeks of surveys, you will be given $2/week for continued participation in the app. You can earn a maximum of $36 for completing each weekly survey. Note that you must reach 8 weeks of survey completions in order to receive any compensation. All payouts will be distributed in Amazon e-gift cards. Under the U.S. federal tax law, you may have individual responsibilities for disclosing the dollar value of the incentive received on this study. 
@@ -2438,7 +2454,7 @@ This survey is being conducted by Lawrence Cheskin, MD and Alison Cuellar, PhD, 
 
 CONSENT: 
 
-I have read this form, all my questions have been answered by the research staff, and I agree to participate in this study. By selecting “yes,” I indicate my eligibility and consent to participate.</mutableString>
+I have read this form, all my questions have been answered by the research staff, and I agree to participate in this study. By selecting “yes,” I indicate my eligibility and consent to participate.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2472,7 +2488,7 @@ I have read this form, all my questions have been answered by the research staff
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1250" id="0bg-kc-WDk"/>
+                                            <constraint firstAttribute="height" constant="1400" id="0bg-kc-WDk"/>
                                             <constraint firstItem="JEU-RA-Hef" firstAttribute="top" secondItem="WyA-w2-ucn" secondAttribute="bottom" constant="30" id="Cey-QM-df4"/>
                                             <constraint firstItem="WyA-w2-ucn" firstAttribute="top" secondItem="FkN-Lq-sob" secondAttribute="top" constant="30" id="G0O-jY-Skt"/>
                                             <constraint firstAttribute="trailing" secondItem="JEU-RA-Hef" secondAttribute="trailing" constant="30" id="K0V-JW-4KZ"/>
