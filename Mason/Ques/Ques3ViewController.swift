@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JFPopup
 
 class Ques3ViewController: UIViewController {
     @IBOutlet weak var input: UITextField!
@@ -23,7 +24,22 @@ class Ques3ViewController: UIViewController {
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         quesList.ques3 = input.text ?? ""
-        return true
+        
+        if quesList.ques3.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JFPopup
 
 class Ques8ViewController: UIViewController {
     @IBOutlet weak var seeekbar1: UISlider!
@@ -52,7 +53,22 @@ class Ques8ViewController: UIViewController {
         quesList.ques8_3 = label3.text ?? ""
         quesList.ques8_4 = label4.text ?? ""
         quesList.ques8_5 = label5.text ?? ""
-        return true
+        
+        if quesList.ques8_1.isEmpty || quesList.ques8_2.isEmpty || quesList.ques8_3.isEmpty || quesList.ques8_4.isEmpty || quesList.ques8_5.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
 
 }

@@ -1297,10 +1297,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsb-EX-Jxs">
-                                        <rect key="frame" x="0.0" y="69" width="65" height="32"/>
+                                        <rect key="frame" x="0.0" y="69" width="122" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Yes" image="ios-radio-button-off">
+                                        <state key="normal" title="In persion" image="ios-radio-button-off">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <state key="selected" image="ios-radio-button-on"/>

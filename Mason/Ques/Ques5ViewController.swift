@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JFPopup
 
 class Ques5ViewController: UIViewController {
     @IBOutlet weak var btn1: UIButton!
@@ -36,6 +37,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = false
             btn7.isSelected = false
+            quesList.ques5 = btn1.currentTitle ?? ""
         case 2:
             btn1.isSelected = false
             btn2.isSelected = true
@@ -44,6 +46,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = false
             btn7.isSelected = false
+            quesList.ques5 = btn2.currentTitle ?? ""
         case 3:
             btn1.isSelected = false
             btn2.isSelected = false
@@ -52,6 +55,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = false
             btn7.isSelected = false
+            quesList.ques5 = btn3.currentTitle ?? ""
         case 4:
             btn1.isSelected = false
             btn2.isSelected = false
@@ -60,6 +64,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = false
             btn7.isSelected = false
+            quesList.ques5 = btn4.currentTitle ?? ""
         case 5:
             btn1.isSelected = false
             btn2.isSelected = false
@@ -68,6 +73,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = true
             btn6.isSelected = false
             btn7.isSelected = false
+            quesList.ques5 = btn5.currentTitle ?? ""
         case 6:
             btn1.isSelected = false
             btn2.isSelected = false
@@ -76,6 +82,7 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = true
             btn7.isSelected = false
+            quesList.ques5 = btn6.currentTitle ?? ""
         case 7:
             btn1.isSelected = false
             btn2.isSelected = false
@@ -84,35 +91,29 @@ class Ques5ViewController: UIViewController {
             btn5.isSelected = false
             btn6.isSelected = false
             btn7.isSelected = true
+            quesList.ques5 = btn7.currentTitle ?? ""
         default:
-            print("erroe")
+            print("error")
         }
     }
     
     // 跳转判断
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if btn1.isSelected {
-            quesList.ques5 = btn1.currentTitle ?? ""
+        if quesList.ques5.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
         }
-        if btn2.isSelected {
-            quesList.ques5 = btn2.currentTitle ?? ""
-        }
-        if btn3.isSelected {
-            quesList.ques5 = btn3.currentTitle ?? ""
-        }
-        if btn4.isSelected {
-            quesList.ques5 = btn4.currentTitle ?? ""
-        }
-        if btn5.isSelected {
-            quesList.ques5 = btn5.currentTitle ?? ""
-        }
-        if btn6.isSelected {
-            quesList.ques5 = btn6.currentTitle ?? ""
-        }
-        if btn7.isSelected {
-            quesList.ques5 = btn7.currentTitle ?? ""
-        }
-        return true
+        return false
     }
 
 }

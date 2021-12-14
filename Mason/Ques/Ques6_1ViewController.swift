@@ -8,6 +8,7 @@
 import UIKit
 import Amplify
 import SwiftUI
+import JFPopup
 
 class Ques6_1ViewController: UIViewController {
     @IBOutlet weak var btn_yes: UIButton!
@@ -38,23 +39,39 @@ class Ques6_1ViewController: UIViewController {
     }
 
     @IBAction func onClick(_ sender: Any) {
-        if btn_yes.isSelected {
-            jumpQues6_2()
+        
+        if quesList.ques6_1.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
         } else {
-            quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
-                (flag) -> Void in
-                
-                if flag {
-                    DispatchQueue.main.async {
-                        self.jumpQues7()
+            
+            if btn_yes.isSelected {
+                jumpQues6_2()
+            } else {
+                quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                    (flag) -> Void in
+                    
+                    if flag {
+                        DispatchQueue.main.async {
+                            self.jumpQues7()
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.jumpQues8()
+                        }
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        self.jumpQues8()
-                    }
-                }
-            })
+                })
+            }
         }
+        
     }
     
     // 跳转问题6_2

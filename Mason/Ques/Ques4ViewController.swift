@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JFPopup
 
 class Ques4ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
@@ -36,7 +37,21 @@ class Ques4ViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return true
+        if quesList.ques4.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
     
 }

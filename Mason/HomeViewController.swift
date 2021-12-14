@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
         quesList.ques1 = label.text ?? ""
         if quesList.ques1.isEmpty {
             JFPopupView.popup.alert {[
-                       .subTitle("我是Title 和 SubTitle可以二选一,单个按钮"),
+                       .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
                            .text("yes"),

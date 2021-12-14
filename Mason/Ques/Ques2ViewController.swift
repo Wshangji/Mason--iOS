@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JFPopup
 
 class Ques2ViewController: UIViewController {
     @IBOutlet weak var btn1: UIButton!
@@ -76,7 +77,22 @@ class Ques2ViewController: UIViewController {
             proes += btn8.currentTitle ?? ""
         }
         quesList.ques2 = proes
-        return true
+        
+        if quesList.ques2.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
     
     

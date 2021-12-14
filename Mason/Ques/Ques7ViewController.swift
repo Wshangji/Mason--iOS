@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import JFPopup
 
 class Ques7ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
@@ -106,8 +107,22 @@ class Ques7ViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-
-        return true
+        
+        if quesList.ques7_1.isEmpty || quesList.ques7_2.isEmpty || quesList.ques7_3.isEmpty || quesList.ques7_4.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            return true
+        }
+        return false
     }
 
 }

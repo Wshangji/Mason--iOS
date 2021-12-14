@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplify
+import JFPopup
 
 class Ques6_2ViewController: UIViewController {
     @IBOutlet weak var btn_y: UIButton!
@@ -36,19 +37,33 @@ class Ques6_2ViewController: UIViewController {
     }
 
     @IBAction func onClick(_ sender: Any) {
-        quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
-            (flag) -> Void in
-            
-            if flag {
-                DispatchQueue.main.async {
-                    self.jumpQues7()
+        
+        if quesList.ques6_2.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                (flag) -> Void in
+                
+                if flag {
+                    DispatchQueue.main.async {
+                        self.jumpQues7()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.jumpQues8()
+                    }
                 }
-            } else {
-                DispatchQueue.main.async {
-                    self.jumpQues8()
-                }
-            }
-        })
+            })
+        }
     }
     
     // 跳转问题7
