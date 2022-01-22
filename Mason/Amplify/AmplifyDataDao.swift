@@ -7,6 +7,7 @@
 
 import Foundation
 import Amplify
+import UIKit
 
 // 创建用户
 func saveUser(user :User, completion: @escaping(Bool) -> Void?) {
@@ -91,6 +92,22 @@ func quaryPersionbyID(perid :String, completion: @escaping(Bool) -> Void?) {
         case .failure(let error):
             completion(false)
             print("Error on query() for type Post - \(error.localizedDescription)")
+        }
+    }
+}
+
+//根据用户名查询问卷最近的一条信息
+func quaryQuestionbyName(userName :String, completion: @escaping(String) -> Void?) {
+    let q = Questions.keys
+    Amplify.DataStore.query(Questions.self, where: q.name == userName, sort: .descending(q.createdAt), paginate: .page(0, limit: 1)) {
+        switch $0 {
+        case .success(let result):
+            for n in result {
+                completion(n.createdAt!.iso8601String)
+            }
+        case .failure(let error):
+            print("Error on query() for type Post - \(error.localizedDescription)")
+            completion("")
         }
     }
 }

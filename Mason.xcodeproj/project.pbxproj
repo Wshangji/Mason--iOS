@@ -10,6 +10,7 @@
 		1C0B314B73EBE3DF136B3312 /* User+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D542921CF767CB7D3DA4181 /* User+Schema.swift */; };
 		567FBAE80AD2EED1F0D4E52E /* Perception.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A095FE13ADCA830366EEBD /* Perception.swift */; };
 		63BD69E62E51911CC569212A /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CFF169826CC4D23A714FC /* Questions.swift */; };
+		74089055279BDB62009A0CC0 /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74089054279BDB62009A0CC0 /* TimeUtil.swift */; };
 		740ABCDF275719F20008DB4C /* VerifyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740ABCDE275719F20008DB4C /* VerifyUtil.swift */; };
 		743AA82D275B5B720089D8EB /* AmplifyDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AA82C275B5B720089D8EB /* AmplifyDataDao.swift */; };
 		743AA82F275B741C0089D8EB /* NotifitionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AA82E275B741C0089D8EB /* NotifitionUtil.swift */; };
@@ -73,6 +74,7 @@
 		1698652BFD727C984EED5559 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		6BF300F3621D70AA9D4A1031 /* Questions+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Questions+Schema.swift"; path = "amplify/generated/models/Questions+Schema.swift"; sourceTree = "<group>"; };
+		74089054279BDB62009A0CC0 /* TimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		740ABCDE275719F20008DB4C /* VerifyUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUtil.swift; sourceTree = "<group>"; };
 		743AA82C275B5B720089D8EB /* AmplifyDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyDataDao.swift; sourceTree = "<group>"; };
 		743AA82E275B741C0089D8EB /* NotifitionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifitionUtil.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				740ABCDE275719F20008DB4C /* VerifyUtil.swift */,
 				743AA82E275B741C0089D8EB /* NotifitionUtil.swift */,
 				743B0269275D154A008AC0ED /* SystemUtil.swift */,
+				74089054279BDB62009A0CC0 /* TimeUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			files = (
 				74899E49273D7051000E3F1F /* PrequestionController.swift in Sources */,
 				7492A2CC2731A25500DCFE27 /* ConfirmeViewController.swift in Sources */,
+				74089055279BDB62009A0CC0 /* TimeUtil.swift in Sources */,
 				7492A2C827319EA300DCFE27 /* RegisterViewController.swift in Sources */,
 				74664FE727464873009A0B82 /* FinishViewController.swift in Sources */,
 				74899E4D273D8571000E3F1F /* TapBarController.swift in Sources */,
@@ -719,7 +723,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -751,7 +755,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.3;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
