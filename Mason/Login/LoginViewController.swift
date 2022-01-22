@@ -71,6 +71,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // 跳转页面函数
     func jump() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
