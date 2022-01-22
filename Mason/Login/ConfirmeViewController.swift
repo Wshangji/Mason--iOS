@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplify
+import JFPopup
 
 class ConfirmeViewController: UIViewController {
     @IBOutlet weak var confirmLable: UITextField!
@@ -35,18 +36,23 @@ class ConfirmeViewController: UIViewController {
             errorLable.text = "please enter verification code"
         }
         else {
-            confirmSignUp(for: paramName, with: confirm, completion:{
-                (flag) -> Void in
-                
-                if flag {
-                    DispatchQueue.main.async {
-                        self.jump()
+            JFPopupView.popup.loading()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        confirmSignUp(for: self.paramName, with: confirm, completion:{
+                            (flag) -> Void in
+                            
+                            if flag {
+                                JFPopupView.popup.hideLoading()
+                                DispatchQueue.main.async {
+                                    self.jump()
+                                }
+                            } else {
+                                JFPopupView.popup.hideLoading()
+                                self.errorLable.text = "regester failed"
+                            }
+                            
+                        })
                     }
-                } else {
-                    self.errorLable.text = "regester failed"
-                }
-                
-            })
         }
         
     }

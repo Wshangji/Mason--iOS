@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplify
+import JFPopup
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
@@ -56,19 +57,24 @@ class RegisterViewController: UIViewController {
         } else if password != compassword {
             errorTable.text = "Those passwords didn’t match. Try again."
         } else {
-            // 调用注册方法
-            signUp(username: username, password: password, email: email, completion: {
-                (flag) -> Void in
-                
-                if flag {
-                    DispatchQueue.main.async {
-                        self.jump()
+            JFPopupView.popup.loading()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        // 调用注册方法
+                        signUp(username: username, password: password, email: email, completion: {
+                            (flag) -> Void in
+                            
+                            if flag {
+                                JFPopupView.popup.hideLoading()
+                                DispatchQueue.main.async {
+                                    self.jump()
+                                }
+                            } else {
+                                JFPopupView.popup.hideLoading()
+                                self.errorTable.text = "regester failed"
+                            }
+                            
+                        })
                     }
-                } else {
-                    self.errorTable.text = "regester failed"
-                }
-                
-            })
         }
         
     }

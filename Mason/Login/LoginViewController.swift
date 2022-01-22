@@ -58,10 +58,25 @@ class LoginViewController: UIViewController {
                             (flag) -> Void in
                             // 登录成功
                             if flag {
-                                JFPopupView.popup.hideLoading()
-                                DispatchQueue.main.async {
-                                    self.jump()
-                                }
+                                
+                                // 判断是否同意许可
+                                quaryUserbyID(userid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                                    (read) -> Void in
+                                    if read {
+                                        // 跳转主界面
+                                        JFPopupView.popup.hideLoading()
+                                        DispatchQueue.main.async {
+                                            self.jump()
+                                        }
+                                    } else {
+                                        // 跳转同意协议
+                                        JFPopupView.popup.hideLoading()
+                                        DispatchQueue.main.async {
+                                            self.jumpPerMessage()
+                                        }
+                                    }
+                                })
+                                
                             } else {
                                 JFPopupView.popup.hideLoading()
                                 self.errorLabel.text = "Login failed"
@@ -75,6 +90,14 @@ class LoginViewController: UIViewController {
     func jump() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = storyboard.instantiateViewController(withIdentifier: "main_view") as? TapBarController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
+    
+    // 跳转同意协议
+    func jumpPerMessage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "PerContext") as? PerContextViewController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(secondVC, animated: true, completion: nil)
     }

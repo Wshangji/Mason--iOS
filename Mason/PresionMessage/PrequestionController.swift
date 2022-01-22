@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplify
+import JFPopup
 
 class PrequestionController: UIViewController {
     
@@ -200,28 +201,31 @@ class PrequestionController: UIViewController {
     }
     
     @IBAction func submit(_ sender: Any) {
-        
-        savePerson(per:
-                    Perception(id: Amplify.Auth.getCurrentUser()!.userId,
-                                   name: Amplify.Auth.getCurrentUser()!.username,
-                                   gender: gender,
-                                   race: race,
-                                   ethnicity: eth,
-                                   ses: ses,
-                                   eigenstates: emp),
-                   completion: {
-            (flag) -> Void in
-            
-            if flag {
-                DispatchQueue.main.async {
-                    self.jumpHome()
-                    
+        JFPopupView.popup.loading()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    savePerson(per:
+                                Perception(id: Amplify.Auth.getCurrentUser()!.userId,
+                                               name: Amplify.Auth.getCurrentUser()!.username,
+                                           gender: self.gender,
+                                           race: self.race,
+                                           ethnicity: self.eth,
+                                           ses: self.ses,
+                                           eigenstates: self.emp),
+                               completion: {
+                        (flag) -> Void in
+                        
+                        if flag {
+                            JFPopupView.popup.hideLoading()
+                            DispatchQueue.main.async {
+                                self.jumpHome()
+                            }
+                        } else {
+                            JFPopupView.popup.hideLoading()
+                            JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
+                        }
+                        
+                    })
                 }
-            } else {
-                
-            }
-            
-        })
     }
     
     // 跳转至主页
