@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user_head" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-cx-1vF">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="358"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="351"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lic-CB-I1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2376.1682242990651" y="-306.47948164146868"/>
+            <point key="canvasLocation" x="2374.766355140187" y="-306.47948164146868"/>
         </scene>
         <!--Home-->
         <scene sceneID="riI-Nr-ufj">
