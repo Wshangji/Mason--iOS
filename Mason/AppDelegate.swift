@@ -31,6 +31,7 @@ struct quesList {
     static var ques9_3: String = "null"
     static var ques9_4: String = "null"
     static var ques9_5: String = "null"
+    static var judge: Int = 0
 }
 
 @main

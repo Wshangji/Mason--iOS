@@ -7,8 +7,9 @@
 
 import UIKit
 import JFPopup
+import MessageUI
 
-class Ques2ViewController: UIViewController {
+class Ques2ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
     @IBOutlet weak var btn3: UIButton!
@@ -26,6 +27,14 @@ class Ques2ViewController: UIViewController {
         btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
         // Do any additional setup after loading the view.
+        
+        if quesList.judge == 0 {
+            let vc = MFMailComposeViewController()
+            vc.delegate = self
+            vc.setSubject("Contact Us")
+            vc.setToRecipients("shangdtream@gmail.com")
+            present(vc, animated: true)
+        }
     }
     
     @IBAction func checkbtn(_ sender: UIButton) {
@@ -95,5 +104,9 @@ class Ques2ViewController: UIViewController {
         return false
     }
     
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+    }
     
 }
