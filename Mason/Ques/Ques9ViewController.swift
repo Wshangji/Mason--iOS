@@ -114,7 +114,8 @@ class Ques9ViewController: UIViewController {
             
         }
         
-        return jump_flag
+        //return jump_flag
+        return true
     }
 
 }

@@ -27,14 +27,15 @@ class Ques2ViewController: UIViewController, UINavigationControllerDelegate {
         btn.setTitleColor(UIColor(red: 7/255, green: 103/255, blue: 53/255, alpha: 1), for: .normal)
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
         // Do any additional setup after loading the view.
-        
+        /*
         if quesList.judge == 0 {
             let vc = MFMailComposeViewController()
             vc.delegate = self
             vc.setSubject("Contact Us")
-            vc.setToRecipients("shangdtream@gmail.com")
+            vc.setToRecipients(["shangdtream@gmail.com"])
             present(vc, animated: true)
         }
+         */
     }
     
     @IBAction func checkbtn(_ sender: UIButton) {

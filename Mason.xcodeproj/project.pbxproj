@@ -162,6 +162,8 @@
 			children = (
 				1698652BFD727C984EED5559 /* awsconfiguration.json */,
 				2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */,
+				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
+				746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */,
 			);
 			name = AmplifyConfig;
 			sourceTree = "<group>";
@@ -276,8 +278,6 @@
 				743AA828275B5A620089D8EB /* Login */,
 				743AA827275B5A330089D8EB /* Ques */,
 				743AA826275AFFC00089D8EB /* Amplify */,
-				746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */,
-				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
 				749AF44E2730D5BE00D32AEA /* AppDelegate.swift */,
 				749AF4502730D5BE00D32AEA /* SceneDelegate.swift */,
 				7476F11E27325E7800132908 /* HomeViewController.swift */,
@@ -480,9 +480,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mason/Pods-Mason-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -723,7 +727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -755,7 +759,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
