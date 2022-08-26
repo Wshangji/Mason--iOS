@@ -93,7 +93,7 @@ class Ques2ViewController: UIViewController, UINavigationControllerDelegate {
                        .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
-                           .text("yes"),
+                           .text("Yes"),
                            .tapActionCallback({
 //                               JFPopupView.popup.toast(hit: "我知道了")
                            })

@@ -12,6 +12,7 @@ class Ques4ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var btn_1: UIButton!
     @IBOutlet weak var btn_2: UIButton!
+    @IBOutlet weak var btn_3: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,18 @@ class Ques4ViewController: UIViewController {
         case 1:
             btn_1.isSelected = true
             btn_2.isSelected = false
+            btn_3.isSelected = false
             quesList.ques4 = btn_1.currentTitle ?? ""
         case 2:
             btn_1.isSelected = false
             btn_2.isSelected = true
+            btn_3.isSelected = false
             quesList.ques4 = btn_2.currentTitle ?? ""
+        case 3:
+            btn_1.isSelected = false
+            btn_2.isSelected = false
+            btn_3.isSelected = true
+            quesList.ques4 = btn_3.currentTitle ?? ""
         default:
             print("erroe")
         }
@@ -42,7 +50,7 @@ class Ques4ViewController: UIViewController {
                        .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
-                           .text("yes"),
+                           .text("Yes"),
                            .tapActionCallback({
 //                               JFPopupView.popup.toast(hit: "我知道了")
                            })

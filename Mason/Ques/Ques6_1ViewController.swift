@@ -11,9 +11,8 @@ import SwiftUI
 import JFPopup
 
 class Ques6_1ViewController: UIViewController {
-    @IBOutlet weak var btn_yes: UIButton!
-    @IBOutlet weak var btn_no: UIButton!
     @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var input: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,56 +22,56 @@ class Ques6_1ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btnRadio(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            btn_yes.isSelected = true
-            btn_no.isSelected = false
-            quesList.ques6_1 = btn_yes.currentTitle ?? ""
-        case 0:
-            btn_yes.isSelected = false
-            btn_no.isSelected = true
-            quesList.ques6_1 = btn_yes.currentTitle ?? ""
-        default:
-            print("error")
-        }
-    }
+//    @IBAction func btnRadio(_ sender: UIButton) {
+//        switch sender.tag {
+//        case 1:
+//            btn_yes.isSelected = true
+//            btn_no.isSelected = false
+//            quesList.ques6_1 = btn_yes.currentTitle ?? ""
+//        case 0:
+//            btn_yes.isSelected = false
+//            btn_no.isSelected = true
+//            quesList.ques6_1 = btn_yes.currentTitle ?? ""
+//        default:
+//            print("error")
+//        }
+//    }
 
-    @IBAction func onClick(_ sender: Any) {
-        
-        if quesList.ques6_1.isEmpty {
-            JFPopupView.popup.alert {[
-                       .subTitle("Please complete questions"),
-                       .showCancel(false),
-                       .confirmAction([
-                           .text("yes"),
-                           .tapActionCallback({
-//                               JFPopupView.popup.toast(hit: "我知道了")
-                           })
-                       ])
-                   ]}
-        } else {
-            
-            if btn_yes.isSelected {
-                jumpQues6_2()
-            } else {
-                quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
-                    (flag) -> Void in
-                    
-                    if flag {
-                        DispatchQueue.main.async {
-                            self.jumpQues7()
-                        }
-                    } else {
-                        DispatchQueue.main.async {
-                            self.jumpQues8()
-                        }
-                    }
-                })
-            }
-        }
-        
-    }
+//    @IBAction func onClick(_ sender: Any) {
+//
+//        if quesList.ques6_1.isEmpty {
+//            JFPopupView.popup.alert {[
+//                       .subTitle("Please complete questions"),
+//                       .showCancel(false),
+//                       .confirmAction([
+//                           .text("yes"),
+//                           .tapActionCallback({
+////                               JFPopupView.popup.toast(hit: "我知道了")
+//                           })
+//                       ])
+//                   ]}
+//        } else {
+//
+//            if btn_yes.isSelected {
+//                jumpQues6_2()
+//            } else {
+//                quaryPersionbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+//                    (flag) -> Void in
+//
+//                    if flag {
+//                        DispatchQueue.main.async {
+//                            self.jumpQues7()
+//                        }
+//                    } else {
+//                        DispatchQueue.main.async {
+//                            self.jumpQues8()
+//                        }
+//                    }
+//                })
+//            }
+//        }
+//
+//    }
     
     // 跳转问题6_2
     func jumpQues6_2() {
@@ -98,4 +97,23 @@ class Ques6_1ViewController: UIViewController {
         self.present(secondVC, animated: true, completion: nil)
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        quesList.ques6_1 = input.text ?? ""
+
+        if quesList.ques6_1.isEmpty {
+            JFPopupView.popup.alert {[
+                .subTitle("Please complete questions"),
+                .showCancel(false),
+                .confirmAction([
+                    .text("Yes"),
+                    .tapActionCallback({
+                        // JFPopupView.popup.toast(hit: "我知道了")
+                        })
+                    ])
+                ]}
+        } else {
+            return true
+        }
+        return false
+    }
 }

@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var btn: UIButton!
     
-    
     override func loadView() {
         super.loadView()
         
@@ -41,7 +40,7 @@ class HomeViewController: UIViewController {
                        .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
-                           .text("yes"),
+                           .text("Yes"),
                            .tapActionCallback({
 //                               JFPopupView.popup.toast(hit: "我知道了")
                            })

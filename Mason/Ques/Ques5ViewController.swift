@@ -14,8 +14,6 @@ class Ques5ViewController: UIViewController {
     @IBOutlet weak var btn3: UIButton!
     @IBOutlet weak var btn4: UIButton!
     @IBOutlet weak var btn5: UIButton!
-    @IBOutlet weak var btn6: UIButton!
-    @IBOutlet weak var btn7: UIButton!
     @IBOutlet weak var btn: UIButton!
     
     override func viewDidLoad() {
@@ -35,8 +33,6 @@ class Ques5ViewController: UIViewController {
             btn3.isSelected = false
             btn4.isSelected = false
             btn5.isSelected = false
-            btn6.isSelected = false
-            btn7.isSelected = false
             quesList.ques5 = btn1.currentTitle ?? ""
         case 2:
             btn1.isSelected = false
@@ -44,8 +40,6 @@ class Ques5ViewController: UIViewController {
             btn3.isSelected = false
             btn4.isSelected = false
             btn5.isSelected = false
-            btn6.isSelected = false
-            btn7.isSelected = false
             quesList.ques5 = btn2.currentTitle ?? ""
         case 3:
             btn1.isSelected = false
@@ -53,8 +47,6 @@ class Ques5ViewController: UIViewController {
             btn3.isSelected = true
             btn4.isSelected = false
             btn5.isSelected = false
-            btn6.isSelected = false
-            btn7.isSelected = false
             quesList.ques5 = btn3.currentTitle ?? ""
         case 4:
             btn1.isSelected = false
@@ -62,8 +54,6 @@ class Ques5ViewController: UIViewController {
             btn3.isSelected = false
             btn4.isSelected = true
             btn5.isSelected = false
-            btn6.isSelected = false
-            btn7.isSelected = false
             quesList.ques5 = btn4.currentTitle ?? ""
         case 5:
             btn1.isSelected = false
@@ -71,27 +61,7 @@ class Ques5ViewController: UIViewController {
             btn3.isSelected = false
             btn4.isSelected = false
             btn5.isSelected = true
-            btn6.isSelected = false
-            btn7.isSelected = false
             quesList.ques5 = btn5.currentTitle ?? ""
-        case 6:
-            btn1.isSelected = false
-            btn2.isSelected = false
-            btn3.isSelected = false
-            btn4.isSelected = false
-            btn5.isSelected = false
-            btn6.isSelected = true
-            btn7.isSelected = false
-            quesList.ques5 = btn6.currentTitle ?? ""
-        case 7:
-            btn1.isSelected = false
-            btn2.isSelected = false
-            btn3.isSelected = false
-            btn4.isSelected = false
-            btn5.isSelected = false
-            btn6.isSelected = false
-            btn7.isSelected = true
-            quesList.ques5 = btn7.currentTitle ?? ""
         default:
             print("error")
         }
@@ -104,7 +74,7 @@ class Ques5ViewController: UIViewController {
                        .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
-                           .text("yes"),
+                           .text("Yes"),
                            .tapActionCallback({
 //                               JFPopupView.popup.toast(hit: "我知道了")
                            })
