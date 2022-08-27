@@ -12,20 +12,23 @@ public struct Questions: Model {
   public var pro5: String?
   public var pro6_1: String?
   public var pro6_2: String?
-  public var pro7_1: String?
-  public var pro7_2: String?
-  public var pro7_3: String?
-  public var pro7_4: String?
-  public var pro8_1: String?
-  public var pro8_2: String?
-  public var pro8_3: String?
-  public var pro8_4: String?
-  public var pro8_5: String?
-  public var pro9_1: String?
-  public var pro9_2: String?
-  public var pro9_3: String?
-  public var pro9_4: String?
-  public var pro9_5: String?
+  public var pro7: String?
+  public var pro8: String?
+  public var pro9: String?
+  public var pro10_1: String?
+  public var pro10_2: String?
+  public var pro10_3: String?
+  public var pro10_4: String?
+  public var pro11_1: String?
+  public var pro11_2: String?
+  public var pro11_3: String?
+  public var pro11_4: String?
+  public var pro11_5: String?
+  public var pro12_1: String?
+  public var pro12_2: String?
+  public var pro12_3: String?
+  public var pro12_4: String?
+  public var pro12_5: String?
   public var updatedAt: Temporal.DateTime?
   public var createdAt: Temporal.DateTime?
   
@@ -38,20 +41,23 @@ public struct Questions: Model {
       pro5: String? = nil,
       pro6_1: String? = nil,
       pro6_2: String? = nil,
-      pro7_1: String? = nil,
-      pro7_2: String? = nil,
-      pro7_3: String? = nil,
-      pro7_4: String? = nil,
-      pro8_1: String? = nil,
-      pro8_2: String? = nil,
-      pro8_3: String? = nil,
-      pro8_4: String? = nil,
-      pro8_5: String? = nil,
-      pro9_1: String? = nil,
-      pro9_2: String? = nil,
-      pro9_3: String? = nil,
-      pro9_4: String? = nil,
-      pro9_5: String? = nil,
+      pro7: String? = nil,
+      pro8: String? = nil,
+      pro9: String? = nil,
+      pro10_1: String? = nil,
+      pro10_2: String? = nil,
+      pro10_3: String? = nil,
+      pro10_4: String? = nil,
+      pro11_1: String? = nil,
+      pro11_2: String? = nil,
+      pro11_3: String? = nil,
+      pro11_4: String? = nil,
+      pro11_5: String? = nil,
+      pro12_1: String? = nil,
+      pro12_2: String? = nil,
+      pro12_3: String? = nil,
+      pro12_4: String? = nil,
+      pro12_5: String? = nil,
       updatedAt: Temporal.DateTime? = nil) {
     self.init(id: id,
       name: name,
@@ -62,20 +68,23 @@ public struct Questions: Model {
       pro5: pro5,
       pro6_1: pro6_1,
       pro6_2: pro6_2,
-      pro7_1: pro7_1,
-      pro7_2: pro7_2,
-      pro7_3: pro7_3,
-      pro7_4: pro7_4,
-      pro8_1: pro8_1,
-      pro8_2: pro8_2,
-      pro8_3: pro8_3,
-      pro8_4: pro8_4,
-      pro8_5: pro8_5,
-      pro9_1: pro9_1,
-      pro9_2: pro9_2,
-      pro9_3: pro9_3,
-      pro9_4: pro9_4,
-      pro9_5: pro9_5,
+      pro7: pro7,
+      pro8: pro8,
+      pro9: pro9,
+      pro10_1: pro10_1,
+      pro10_2: pro10_2,
+      pro10_3: pro10_3,
+      pro10_4: pro10_4,
+      pro11_1: pro11_1,
+      pro11_2: pro11_2,
+      pro11_3: pro11_3,
+      pro11_4: pro11_4,
+      pro11_5: pro11_5,
+      pro12_1: pro12_1,
+      pro12_2: pro12_2,
+      pro12_3: pro12_3,
+      pro12_4: pro12_4,
+      pro12_5: pro12_5,
       updatedAt: updatedAt,
       createdAt: nil)
   }
@@ -88,20 +97,23 @@ public struct Questions: Model {
       pro5: String? = nil,
       pro6_1: String? = nil,
       pro6_2: String? = nil,
-      pro7_1: String? = nil,
-      pro7_2: String? = nil,
-      pro7_3: String? = nil,
-      pro7_4: String? = nil,
-      pro8_1: String? = nil,
-      pro8_2: String? = nil,
-      pro8_3: String? = nil,
-      pro8_4: String? = nil,
-      pro8_5: String? = nil,
-      pro9_1: String? = nil,
-      pro9_2: String? = nil,
-      pro9_3: String? = nil,
-      pro9_4: String? = nil,
-      pro9_5: String? = nil,
+      pro7: String? = nil,
+      pro8: String? = nil,
+      pro9: String? = nil,
+      pro10_1: String? = nil,
+      pro10_2: String? = nil,
+      pro10_3: String? = nil,
+      pro10_4: String? = nil,
+      pro11_1: String? = nil,
+      pro11_2: String? = nil,
+      pro11_3: String? = nil,
+      pro11_4: String? = nil,
+      pro11_5: String? = nil,
+      pro12_1: String? = nil,
+      pro12_2: String? = nil,
+      pro12_3: String? = nil,
+      pro12_4: String? = nil,
+      pro12_5: String? = nil,
       updatedAt: Temporal.DateTime? = nil,
       createdAt: Temporal.DateTime? = nil) {
       self.id = id
@@ -113,20 +125,23 @@ public struct Questions: Model {
       self.pro5 = pro5
       self.pro6_1 = pro6_1
       self.pro6_2 = pro6_2
-      self.pro7_1 = pro7_1
-      self.pro7_2 = pro7_2
-      self.pro7_3 = pro7_3
-      self.pro7_4 = pro7_4
-      self.pro8_1 = pro8_1
-      self.pro8_2 = pro8_2
-      self.pro8_3 = pro8_3
-      self.pro8_4 = pro8_4
-      self.pro8_5 = pro8_5
-      self.pro9_1 = pro9_1
-      self.pro9_2 = pro9_2
-      self.pro9_3 = pro9_3
-      self.pro9_4 = pro9_4
-      self.pro9_5 = pro9_5
+      self.pro7 = pro7
+      self.pro8 = pro8
+      self.pro9 = pro9
+      self.pro10_1 = pro10_1
+      self.pro10_2 = pro10_2
+      self.pro10_3 = pro10_3
+      self.pro10_4 = pro10_4
+      self.pro11_1 = pro11_1
+      self.pro11_2 = pro11_2
+      self.pro11_3 = pro11_3
+      self.pro11_4 = pro11_4
+      self.pro11_5 = pro11_5
+      self.pro12_1 = pro12_1
+      self.pro12_2 = pro12_2
+      self.pro12_3 = pro12_3
+      self.pro12_4 = pro12_4
+      self.pro12_5 = pro12_5
       self.updatedAt = updatedAt
       self.createdAt = createdAt
   }

@@ -209,9 +209,9 @@
 				74E83CD527420889005CAA3F /* Ques7ViewController.swift */,
 				74E83CD72745D64A005CAA3F /* Ques8ViewController.swift */,
 				74E83CDB2745D950005CAA3F /* Ques9ViewController.swift */,
-				7473440328B779250072FC50 /* Ques12ViewController.swift */,
-				74275C5628B9053100D0D7D3 /* Ques11ViewController.swift */,
 				74275C5828B9054300D0D7D3 /* Ques10ViewController.swift */,
+				74275C5628B9053100D0D7D3 /* Ques11ViewController.swift */,
+				7473440328B779250072FC50 /* Ques12ViewController.swift */,
 			);
 			path = Ques;
 			sourceTree = "<group>";

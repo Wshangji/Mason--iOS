@@ -50,67 +50,70 @@ class Ques12ViewController: UIViewController {
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        var jump_flag: Bool = true
+        var jump_flag: Bool = false
         
-        quesList.ques9_1 = label1.text ?? ""
-        quesList.ques9_2 = label2.text ?? ""
-        quesList.ques9_3 = label3.text ?? ""
-        quesList.ques9_4 = label4.text ?? ""
-        quesList.ques9_5 = label5.text ?? ""
+        quesList.ques12_1 = label1.text ?? ""
+        quesList.ques12_2 = label2.text ?? ""
+        quesList.ques12_3 = label3.text ?? ""
+        quesList.ques12_4 = label4.text ?? ""
+        quesList.ques12_5 = label5.text ?? ""
         
-        if quesList.ques9_1.isEmpty || quesList.ques9_2.isEmpty || quesList.ques9_3.isEmpty || quesList.ques9_4.isEmpty || quesList.ques9_5.isEmpty {
+        if quesList.ques12_1.isEmpty || quesList.ques12_2.isEmpty || quesList.ques12_3.isEmpty || quesList.ques12_4.isEmpty || quesList.ques12_5.isEmpty {
             JFPopupView.popup.alert {[
                        .subTitle("Please complete questions"),
                        .showCancel(false),
                        .confirmAction([
-                           .text("yes"),
+                           .text("Yes"),
                            .tapActionCallback({
 //                               JFPopupView.popup.toast(hit: "我知道了")
                            })
                        ])
                    ]}
         } else {
-//
-//            JFPopupView.popup.loading()
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                        // 保存问卷
-//                        saveQues(questions: Questions(
-//                            name: Amplify.Auth.getCurrentUser()!.username,
-//                            pro1: quesList.ques1,
-//                            pro2: quesList.ques2,
-//                            pro3: quesList.ques3,
-//                            pro4: quesList.ques4,
-//                            pro5: quesList.ques5,
-//                            pro6_1: quesList.ques6_1,
-//                            pro6_2: quesList.ques6_2,
-//                            pro7_1: quesList.ques7_1,
-//                            pro7_2: quesList.ques7_2,
-//                            pro7_3: quesList.ques7_3,
-//                            pro7_4: quesList.ques7_4,
-//                            pro8_1: quesList.ques8_1,
-//                            pro8_2: quesList.ques8_2,
-//                            pro8_3: quesList.ques8_3,
-//                            pro8_4: quesList.ques8_4,
-//                            pro8_5: quesList.ques8_5,
-//                            pro9_1: quesList.ques9_1,
-//                            pro9_2: quesList.ques9_2,
-//                            pro9_3: quesList.ques9_3,
-//                            pro9_4: quesList.ques9_4,
-//                            pro9_5: quesList.ques9_5
-//                        ), completion: {
-//                            (flag) -> Void in
-//
-//                            if flag {
-//                                JFPopupView.popup.hideLoading()
-//                                jump_flag = true
-//                                remendMe()
-//                            } else {
-//                                JFPopupView.popup.hideLoading()
-//                                JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
-//                            }
-//                        })
-//
-//                    }
+
+            JFPopupView.popup.loading()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        // 保存问卷
+                        saveQues(questions: Questions(
+                            name: Amplify.Auth.getCurrentUser()!.username,
+                            pro1: quesList.ques1,
+                            pro2: quesList.ques2,
+                            pro3: quesList.ques3,
+                            pro4: quesList.ques4,
+                            pro5: quesList.ques5,
+                            pro6_1: quesList.ques6_1,
+                            pro6_2: quesList.ques6_2,
+                            pro7: quesList.ques7,
+                            pro8: quesList.ques8,
+                            pro9: quesList.ques9,
+                            pro10_1: quesList.ques10_1,
+                            pro10_2: quesList.ques10_2,
+                            pro10_3: quesList.ques10_3,
+                            pro10_4: quesList.ques10_4,
+                            pro11_1: quesList.ques11_1,
+                            pro11_2: quesList.ques11_2,
+                            pro11_3: quesList.ques11_3,
+                            pro11_4: quesList.ques11_4,
+                            pro11_5: quesList.ques11_5,
+                            pro12_1: quesList.ques12_1,
+                            pro12_2: quesList.ques12_2,
+                            pro12_3: quesList.ques12_3,
+                            pro12_4: quesList.ques12_4,
+                            pro12_5: quesList.ques12_5
+                        ), completion: {
+                            (flag) -> Void in
+
+                            if flag {
+                                JFPopupView.popup.hideLoading()
+                                jump_flag = true
+                                remendMe()
+                            } else {
+                                JFPopupView.popup.hideLoading()
+                                JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
+                            }
+                        })
+
+                    }
             
         }
         
