@@ -8,7 +8,8 @@ public struct Perception: Model {
   public var gender: String?
   public var race: String?
   public var ethnicity: String?
-  public var ses: String?
+  public var credits: String?
+  public var employs: String?
   public var eigenstates: String?
   public var createdAt: Temporal.DateTime?
   public var updatedAt: Temporal.DateTime?
@@ -18,7 +19,8 @@ public struct Perception: Model {
       gender: String? = nil,
       race: String? = nil,
       ethnicity: String? = nil,
-      ses: String? = nil,
+      credits: String? = nil,
+      employs: String? = nil,
       eigenstates: String? = nil,
       createdAt: Temporal.DateTime? = nil) {
     self.init(id: id,
@@ -26,7 +28,8 @@ public struct Perception: Model {
       gender: gender,
       race: race,
       ethnicity: ethnicity,
-      ses: ses,
+      credits: credits,
+      employs: employs,
       eigenstates: eigenstates,
       createdAt: createdAt,
       updatedAt: nil)
@@ -36,7 +39,8 @@ public struct Perception: Model {
       gender: String? = nil,
       race: String? = nil,
       ethnicity: String? = nil,
-      ses: String? = nil,
+      credits: String? = nil,
+      employs: String? = nil,
       eigenstates: String? = nil,
       createdAt: Temporal.DateTime? = nil,
       updatedAt: Temporal.DateTime? = nil) {
@@ -45,7 +49,8 @@ public struct Perception: Model {
       self.gender = gender
       self.race = race
       self.ethnicity = ethnicity
-      self.ses = ses
+      self.credits = credits
+      self.employs = employs
       self.eigenstates = eigenstates
       self.createdAt = createdAt
       self.updatedAt = updatedAt

@@ -10,7 +10,8 @@ extension Perception {
     case gender
     case race
     case ethnicity
-    case ses
+    case credits
+    case employs
     case eigenstates
     case createdAt
     case updatedAt
@@ -34,7 +35,8 @@ extension Perception {
       .field(perception.gender, is: .optional, ofType: .string),
       .field(perception.race, is: .optional, ofType: .string),
       .field(perception.ethnicity, is: .optional, ofType: .string),
-      .field(perception.ses, is: .optional, ofType: .string),
+      .field(perception.credits, is: .optional, ofType: .string),
+      .field(perception.employs, is: .optional, ofType: .string),
       .field(perception.eigenstates, is: .optional, ofType: .string),
       .field(perception.createdAt, is: .optional, ofType: .dateTime),
       .field(perception.updatedAt, is: .optional, isReadOnly: true, ofType: .dateTime)

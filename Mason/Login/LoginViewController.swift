@@ -53,23 +53,23 @@ class LoginViewController: UIViewController {
         } else {
             JFPopupView.popup.loading(hit: "Loading")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        // 调用登录方法
+//                         调用登录方法
                         signIn(username: username, password: password, completion: {
                             (flag) -> Void in
-                            // 登录成功
+//                             登录成功
                             if flag {
                                 
-                                // 判断是否同意许可
+//                                 判断是否同意许可
                                 quaryUserbyID(userid: Amplify.Auth.getCurrentUser()!.userId, completion: {
                                     (read) -> Void in
                                     if read {
-                                        // 跳转主界面
+//                                         跳转主界面
                                         JFPopupView.popup.hideLoading()
                                         DispatchQueue.main.async {
                                             self.jump()
                                         }
                                     } else {
-                                        // 跳转同意协议
+//                                         跳转同意协议
                                         JFPopupView.popup.hideLoading()
                                         DispatchQueue.main.async {
                                             self.jumpPerMessage()

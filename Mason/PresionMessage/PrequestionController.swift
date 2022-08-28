@@ -22,26 +22,29 @@ class PrequestionController: UIViewController {
     @IBOutlet weak var race4: UIButton!
     @IBOutlet weak var race5: UIButton!
     
-    @IBOutlet weak var eth1: UIButton!
-    @IBOutlet weak var eth2: UIButton!
-    @IBOutlet weak var eth3: UIButton!
+    @IBOutlet weak var ethnicity1: UIButton!
+    @IBOutlet weak var ethnicity2: UIButton!
+    @IBOutlet weak var ethnicity3: UIButton!
     
-    @IBOutlet weak var ses1: UIButton!
-    @IBOutlet weak var ses2: UIButton!
-    @IBOutlet weak var ses3: UIButton!
-    @IBOutlet weak var ses4: UIButton!
+    @IBOutlet weak var credits1: UIButton!
+    @IBOutlet weak var credits2: UIButton!
 
-    @IBOutlet weak var emp1: UIButton!
-    @IBOutlet weak var emp2: UIButton!
-    @IBOutlet weak var emp3: UIButton!
+    @IBOutlet weak var employs1: UIButton!
+    @IBOutlet weak var employs2: UIButton!
+    @IBOutlet weak var employs3: UIButton!
+    
+    @IBOutlet weak var eigenstates1: UIButton!
+    @IBOutlet weak var eigenstates2: UIButton!
     
     @IBOutlet weak var submit: UIButton!
     
+    
     var gender: String = ""
     var race: String = ""
-    var eth: String = ""
-    var ses: String = ""
-    var emp: String = ""
+    var ethnicity: String = ""
+    var credits: String = ""
+    var employs: String = ""
+    var eigenstates: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,82 +124,81 @@ class PrequestionController: UIViewController {
             race5.isSelected = true
             race = race5.currentTitle ?? ""
         default:
-            print("error")
+            print("race error")
         }
     }
     
-    @IBAction func eth_rbt(_ sender: UIButton) {
+    @IBAction func ethnicity_rbt(_ sender: UIButton) {
         switch sender.tag {
         case 9:
-            eth1.isSelected = true
-            eth2.isSelected = false
-            eth3.isSelected = false
-            eth = eth1.currentTitle ?? ""
+            ethnicity1.isSelected = true
+            ethnicity2.isSelected = false
+            ethnicity3.isSelected = false
+            ethnicity = ethnicity1.currentTitle ?? ""
         case 10:
-            eth1.isSelected = false
-            eth2.isSelected = true
-            eth3.isSelected = false
-            eth = eth2.currentTitle ?? ""
+            ethnicity1.isSelected = false
+            ethnicity2.isSelected = true
+            ethnicity3.isSelected = false
+            ethnicity = ethnicity2.currentTitle ?? ""
         case 11:
-            eth1.isSelected = false
-            eth2.isSelected = false
-            eth3.isSelected = true
-            eth = eth3.currentTitle ?? ""
+            ethnicity1.isSelected = false
+            ethnicity2.isSelected = false
+            ethnicity3.isSelected = true
+            ethnicity = ethnicity3.currentTitle ?? ""
         default:
-            print("error")
+            print("ethnicity error")
         }
     }
 
-    @IBAction func ses_rbt(_ sender: UIButton) {
+    @IBAction func credits_rbt(_ sender: UIButton) {
         switch sender.tag {
         case 12:
-            ses1.isSelected = true
-            ses2.isSelected = false
-            ses3.isSelected = false
-            ses4.isSelected = false
-            ses = ses1.currentTitle ?? ""
+            credits1.isSelected = true
+            credits2.isSelected = false
+            credits = credits1.currentTitle ?? ""
         case 13:
-            ses1.isSelected = false
-            ses2.isSelected = true
-            ses3.isSelected = false
-            ses4.isSelected = false
-            ses = ses2.currentTitle ?? ""
-        case 14:
-            ses1.isSelected = false
-            ses2.isSelected = false
-            ses3.isSelected = true
-            ses4.isSelected = false
-            ses = ses3.currentTitle ?? ""
-        case 15:
-            ses1.isSelected = false
-            ses2.isSelected = false
-            ses3.isSelected = false
-            ses4.isSelected = true
-            ses = ses4.currentTitle ?? ""
+            credits1.isSelected = false
+            credits2.isSelected = true
+            credits = credits2.currentTitle ?? ""
         default:
-            print("error")
+            print("credits error")
         }
     }
 
-    @IBAction func emp_rbt(_ sender: UIButton) {
+    @IBAction func employs_rbt(_ sender: UIButton) {
         switch sender.tag {
+        case 14:
+            employs1.isSelected = true
+            employs2.isSelected = false
+            employs3.isSelected = false
+            employs = employs1.currentTitle ?? ""
+        case 15:
+            employs1.isSelected = false
+            employs2.isSelected = true
+            employs3.isSelected = false
+            employs = employs2.currentTitle ?? ""
         case 16:
-            emp1.isSelected = true
-            emp2.isSelected = false
-            emp3.isSelected = false
-            emp = emp1.currentTitle ?? ""
-        case 17:
-            emp1.isSelected = false
-            emp2.isSelected = true
-            emp3.isSelected = false
-            emp = emp2.currentTitle ?? ""
-        case 18:
-            emp1.isSelected = false
-            emp2.isSelected = false
-            emp3.isSelected = true
-            emp = emp2.currentTitle ?? ""
+            employs1.isSelected = false
+            employs2.isSelected = false
+            employs3.isSelected = true
+            employs = employs3.currentTitle ?? ""
         default:
-            print("error")
+            print("employs error")
+        }
+    }
+    
+    @IBAction func eigenstates_rbt(_ sender: UIButton) {
+        switch sender.tag {
+        case 17:
+            eigenstates1.isSelected = true
+            eigenstates2.isSelected = false
+            eigenstates = eigenstates1.currentTitle ?? ""
+        case 18:
+            eigenstates1.isSelected = false
+            eigenstates2.isSelected = true
+            eigenstates = eigenstates2.currentTitle ?? ""
+        default:
+            print("eigenstates error")
         }
     }
     
@@ -204,14 +206,16 @@ class PrequestionController: UIViewController {
         JFPopupView.popup.loading()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     savePerson(per:
-                                Perception(id: Amplify.Auth.getCurrentUser()!.userId,
-                                               name: Amplify.Auth.getCurrentUser()!.username,
-                                           gender: self.gender,
-                                           race: self.race,
-                                           ethnicity: self.eth,
-                                           ses: self.ses,
-                                           eigenstates: self.emp),
-                               completion: {
+                                Perception(
+                                    id: Amplify.Auth.getCurrentUser()!.userId,
+                                    name: Amplify.Auth.getCurrentUser()!.username,
+                                    gender: self.gender,
+                                    race: self.race,
+                                    ethnicity: self.ethnicity,
+                                    credits: self.credits,
+                                    employs: self.employs,
+                                    eigenstates: self.eigenstates
+                    ),completion: {
                         (flag) -> Void in
                         
                         if flag {
@@ -223,7 +227,7 @@ class PrequestionController: UIViewController {
                             JFPopupView.popup.hideLoading()
                             JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
                         }
-                        
+
                     })
                 }
     }

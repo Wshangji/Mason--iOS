@@ -7,20 +7,12 @@
 
 import UIKit
 import JFPopup
+import Amplify
 
 class Ques8ViewController: UIViewController {
-    @IBOutlet weak var seeekbar1: UISlider!
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var seeekbar2: UISlider!
-    @IBOutlet weak var label2: UILabel!
-    @IBOutlet weak var seeekbar3: UISlider!
-    @IBOutlet weak var label3: UILabel!
-    @IBOutlet weak var seeekbar4: UISlider!
-    @IBOutlet weak var label4: UILabel!
-    @IBOutlet weak var seeekbar5: UISlider!
-    @IBOutlet weak var label5: UILabel!
-    
     @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,46 +21,73 @@ class Ques8ViewController: UIViewController {
         btn.backgroundColor = UIColor(red: 255/255, green: 205/255, blue: 52/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func changeData(_ sender: UISlider) {
+    
+    
+    @IBAction func btnRadio(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            label1.text = String(Int(seeekbar1.value))
+            btn1.isSelected = true
+            btn2.isSelected = false
+            quesList.ques8 = btn1.currentTitle ?? ""
         case 2:
-            label2.text = String(Int(seeekbar2.value))
-        case 3:
-            label3.text = String(Int(seeekbar3.value))
-        case 4:
-            label4.text = String(Int(seeekbar4.value))
-        case 5:
-            label5.text = String(Int(seeekbar5.value))
+            btn1.isSelected = false
+            btn2.isSelected = true
+            quesList.ques8 = btn2.currentTitle ?? ""
         default:
             print("error")
         }
     }
 
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        quesList.ques8_1 = label1.text ?? ""
-        quesList.ques8_2 = label2.text ?? ""
-        quesList.ques8_3 = label3.text ?? ""
-        quesList.ques8_4 = label4.text ?? ""
-        quesList.ques8_5 = label5.text ?? ""
-        
-        if quesList.ques8_1.isEmpty || quesList.ques8_2.isEmpty || quesList.ques8_3.isEmpty || quesList.ques8_4.isEmpty || quesList.ques8_5.isEmpty {
-            JFPopupView.popup.alert {[
-                       .subTitle("Please complete questions"),
-                       .showCancel(false),
-                       .confirmAction([
-                           .text("yes"),
-                           .tapActionCallback({
-//                               JFPopupView.popup.toast(hit: "我知道了")
-                           })
-                       ])
-                   ]}
+    // 跳转判断
+    @IBAction func btn_onClick(_ sender: Any) {
+        if quesList.ques8.isEmpty {
+            JFPopupView
+                .popup
+                .alert {[
+                    .subTitle("Please complete questions"),
+                    .showCancel(false),
+                    .confirmAction([
+                    .text("Yes"),
+                    .tapActionCallback({
+//                    JFPopupView.popup.toast(hit: "我知道了")
+                        })
+                    ])
+                ]}
         } else {
-            return true
+            JFPopupView.popup.loading()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        quaryPersionEmployedbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                            (istrue) -> Void in
+                            
+                            if istrue {
+                                JFPopupView.popup.hideLoading()
+                                DispatchQueue.main.async {
+                                    self.jumpQues10()
+                                }
+                            } else {
+                                JFPopupView.popup.hideLoading()
+                                DispatchQueue.main.async {
+                                    self.jumpQues9()
+                                }
+                            }
+                        })
+            }
         }
-        return false
     }
-
+    
+    // 跳转问题9
+    func jumpQues9() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques9") as? Ques9ViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
+    
+    // 跳转问题10
+    func jumpQues10() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques10") as? Ques10ViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
 }

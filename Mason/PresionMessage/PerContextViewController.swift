@@ -59,7 +59,7 @@ class PerContextViewController: UIViewController {
     // 跳转用户信息界面
     func jumpMessage() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "message") as? PrequestionController else {  return }
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "prequestion") as? PrequestionController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(secondVC, animated: true, completion: nil)
     }
