@@ -47,11 +47,9 @@ class Ques12ViewController: UIViewController {
             print("error")
         }
     }
-
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        var jump_flag: Bool = false
-        
+    
+    // 跳转判断
+    @IBAction func btn_onClick(_ sender: Any) {
         quesList.ques12_1 = label1.text ?? ""
         quesList.ques12_2 = label2.text ?? ""
         quesList.ques12_3 = label3.text ?? ""
@@ -105,8 +103,10 @@ class Ques12ViewController: UIViewController {
 
                             if flag {
                                 JFPopupView.popup.hideLoading()
-                                jump_flag = true
                                 remendMe()
+                                DispatchQueue.main.async {
+                                    self.jumpFinish()
+                                }
                             } else {
                                 JFPopupView.popup.hideLoading()
                                 JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
@@ -116,8 +116,13 @@ class Ques12ViewController: UIViewController {
                     }
             
         }
-        
-        return jump_flag
     }
-
+    
+    // 跳转完成
+    func jumpFinish() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Finish") as? FinishViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
 }

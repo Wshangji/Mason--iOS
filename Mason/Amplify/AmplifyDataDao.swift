@@ -78,13 +78,31 @@ func quaryUserbyID(userid :String, completion: @escaping(Bool) -> Void?) {
     }
 }
 
-// 根据ID查询用户信息
-func quaryPersionbyID(perid :String, completion: @escaping(Bool) -> Void?) {
+// 根据ID查询用户是否工作
+func quaryPersionEmployedbyID(perid :String, completion: @escaping(Bool) -> Void?) {
     Amplify.DataStore.query(Perception.self, byId: perid) {
         switch $0 {
         case .success(let result):
-            let post = result?.ethnicity ?? ""
-            if (!post.isEmpty) && (post != "Not currently employed") {
+            let post = result?.employs ?? ""
+            if (!post.isEmpty)&&(post=="Not currently employed") {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        case .failure(let error):
+            completion(false)
+            print("Error on query() for type Post - \(error.localizedDescription)")
+        }
+    }
+}
+
+// 根据ID查询用户是否参加心理咨询
+func quaryPersionEigenstatesbyID(perid :String, completion: @escaping(Bool) -> Void?) {
+    Amplify.DataStore.query(Perception.self, byId: perid) {
+        switch $0 {
+        case .success(let result):
+            let post = result?.eigenstates ?? ""
+            if (!post.isEmpty) && (post == "Yes") {
                 completion(true)
             } else {
                 completion(false)

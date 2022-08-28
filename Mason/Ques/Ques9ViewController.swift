@@ -37,8 +37,7 @@ class Ques9ViewController: UIViewController {
             print("error")
         }
     }
-
-    // 跳转判断
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if quesList.ques9.isEmpty {
