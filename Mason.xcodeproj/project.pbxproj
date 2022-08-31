@@ -23,6 +23,8 @@
 		746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2C2733D2F600D36D20 /* awsconfiguration.json */; };
 		746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */; };
 		7473440428B779250072FC50 /* Ques12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473440328B779250072FC50 /* Ques12ViewController.swift */; };
+		7473BCC828BDEC6D00CBCFD7 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7473BCC628BDEC6D00CBCFD7 /* awsconfiguration.json */; };
+		7473BCC928BDEC6D00CBCFD7 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7473BCC728BDEC6D00CBCFD7 /* amplifyconfiguration.json */; };
 		7476F11F27325E7800132908 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476F11E27325E7800132908 /* HomeViewController.swift */; };
 		747CA4B8275A800900F8B864 /* AmplifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747CA4B7275A800900F8B864 /* AmplifyService.swift */; };
 		74899E49273D7051000E3F1F /* PrequestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74899E48273D7051000E3F1F /* PrequestionController.swift */; };
@@ -90,6 +92,8 @@
 		746C4D2C2733D2F600D36D20 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		7473440328B779250072FC50 /* Ques12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ques12ViewController.swift; sourceTree = "<group>"; };
+		7473BCC628BDEC6D00CBCFD7 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		7473BCC728BDEC6D00CBCFD7 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		7476F11E27325E7800132908 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		747CA4B7275A800900F8B864 /* AmplifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyService.swift; sourceTree = "<group>"; };
 		74899E48273D7051000E3F1F /* PrequestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrequestionController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				2AAAF41BAFF58383C652CC0D /* amplifyconfiguration.json */,
 				746C4D2C2733D2F600D36D20 /* awsconfiguration.json */,
 				746C4D2D2733D2F600D36D20 /* amplifyconfiguration.json */,
+				7473BCC628BDEC6D00CBCFD7 /* awsconfiguration.json */,
+				7473BCC728BDEC6D00CBCFD7 /* amplifyconfiguration.json */,
 			);
 			name = AmplifyConfig;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 		749AF44D2730D5BE00D32AEA /* Mason */ = {
 			isa = PBXGroup;
 			children = (
+				7473BCC728BDEC6D00CBCFD7 /* amplifyconfiguration.json */,
+				7473BCC628BDEC6D00CBCFD7 /* awsconfiguration.json */,
 				743AA82B275B5AD50089D8EB /* User */,
 				743AA82A275B5AB30089D8EB /* Util */,
 				743AA829275B5A910089D8EB /* PresionMessage */,
@@ -432,12 +440,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7473BCC828BDEC6D00CBCFD7 /* awsconfiguration.json in Resources */,
 				749AF45B2730D5BF00D32AEA /* LaunchScreen.storyboard in Resources */,
 				749AF4582730D5BF00D32AEA /* Assets.xcassets in Resources */,
 				746C4D2E2733D2F600D36D20 /* awsconfiguration.json in Resources */,
 				746C4D2F2733D2F600D36D20 /* amplifyconfiguration.json in Resources */,
 				749AF4562730D5BE00D32AEA /* Main.storyboard in Resources */,
 				BE2C7AE6BAE0E2749B568E3D /* awsconfiguration.json in Resources */,
+				7473BCC928BDEC6D00CBCFD7 /* amplifyconfiguration.json in Resources */,
 				DDEA41FCA13E7A8D2FE3B25B /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,7 +749,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.9;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -771,7 +781,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.9;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.george.mason.gradwyn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
