@@ -204,32 +204,46 @@ class PrequestionController: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         JFPopupView.popup.loading()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    savePerson(per:
-                                Perception(
-                                    id: Amplify.Auth.getCurrentUser()!.userId,
-                                    name: Amplify.Auth.getCurrentUser()!.username,
-                                    gender: self.gender,
-                                    race: self.race,
-                                    ethnicity: self.ethnicity,
-                                    credits: self.credits,
-                                    employs: self.employs,
-                                    eigenstates: self.eigenstates
-                    ),completion: {
-                        (flag) -> Void in
-                        
-                        if flag {
-                            JFPopupView.popup.hideLoading()
-                            DispatchQueue.main.async {
-                                self.jumpHome()
-                            }
-                        } else {
-                            JFPopupView.popup.hideLoading()
-                            JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
-                        }
-
-                    })
-                }
+        if gender.isEmpty && race.isEmpty && ethnicity.isEmpty && credits.isEmpty && employs.isEmpty && eigenstates.isEmpty {
+            JFPopupView.popup.alert {[
+                       .subTitle("Please complete questions"),
+                       .showCancel(false),
+                       .confirmAction([
+                           .text("Yes"),
+                           .tapActionCallback({
+//                               JFPopupView.popup.toast(hit: "我知道了")
+                           })
+                       ])
+                   ]}
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                savePerson(per:
+                            Perception(
+                                id: Amplify.Auth.getCurrentUser()!.userId,
+                                name: Amplify.Auth.getCurrentUser()!.username,
+                                gender: self.gender,
+                                race: self.race,
+                                ethnicity: self.ethnicity,
+                                credits: self.credits,
+                                employs: self.employs,
+                                eigenstates: self.eigenstates,
+                                createdAt: Temporal.DateTime.now()
+                            ),completion: {
+                                (flag) -> Void in
+                                
+                                if flag {
+                                    JFPopupView.popup.hideLoading()
+                                    DispatchQueue.main.async {
+                                        self.jumpHome()
+                                    }
+                                } else {
+                                    JFPopupView.popup.hideLoading()
+                                    JFPopupView.popup.toast(hit: "Please check your network connection and try loading again.")
+                                }
+                                
+                            })
+            }
+        }
     }
     
     // 跳转至主页

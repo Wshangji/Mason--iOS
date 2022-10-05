@@ -85,9 +85,9 @@ func quaryPersionEmployedbyID(perid :String, completion: @escaping(Bool) -> Void
         case .success(let result):
             let post = result?.employs ?? ""
             if (!post.isEmpty)&&(post=="Not currently employed") {
-                completion(true)
-            } else {
                 completion(false)
+            } else {
+                completion(true)
             }
         case .failure(let error):
             completion(false)

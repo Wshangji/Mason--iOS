@@ -622,7 +622,7 @@
 		926B8FF720CF9FA7A430AC14CE2280A6 /* IdentifiedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92364FF8ECFAFFF2194D00CF2CE06701 /* IdentifiedLine.swift */; };
 		92CAF87C58AE3D4153865EA0A917B5E8 /* AWSMutationEventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E2E572382CD4943AF588827861539 /* AWSMutationEventPublisher.swift */; };
 		931C5E218E8D5AB594952C536C3C0946 /* ConnectionProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327E63E7D5E0439E6A097C49E37501A /* ConnectionProviderError.swift */; };
-		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */; };
+		9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */; };
 		936FFF51F8C9D05E726D520495B4AE97 /* AWSIncomingSubscriptionEventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F7FAF406A9C06997AF8ECE0BCF7631 /* AWSIncomingSubscriptionEventPublisher.swift */; };
 		938AE2B0C46F014E4C509B9CD878EFD4 /* AWSAPIPlugin+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F787A5AA06D067B953D47D6175DE9C /* AWSAPIPlugin+Configure.swift */; };
 		938EE9D3148203EF5E4399347DACD18C /* ReconcileAndLocalSaveQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E20E69017628036D78C522C780E5B /* ReconcileAndLocalSaveQueue.swift */; };
@@ -2261,7 +2261,7 @@
 		CA07EF3A7C43DEABF33E713F5F7A2172 /* GraphQLDocumentnputValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphQLDocumentnputValue.swift; path = AmplifyPlugins/Core/AWSPluginsCore/Model/Support/GraphQLDocumentnputValue.swift; sourceTree = "<group>"; };
 		CA2AB2A7D1DA12AEE7595BB040B9A1B4 /* URLRequestConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLRequestConstants.swift; path = AmplifyPlugins/API/AWSAPICategoryPlugin/Support/Constants/URLRequestConstants.swift; sourceTree = "<group>"; };
 		CA2EFF9126961035BD88296E17EB75C4 /* StorageRemoveOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageRemoveOperation.swift; path = Amplify/Categories/Storage/Operation/StorageRemoveOperation.swift; sourceTree = "<group>"; };
-		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JFPopup-JFPopup"; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFPopup.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5B24A6B3C5152FE28CB90C5888144C /* SQLiteObjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLiteObjc.h; path = Sources/SQLiteObjc/include/SQLiteObjc.h; sourceTree = "<group>"; };
 		CB43AF125DAD8CF7A251BDFF942D3826 /* AgeRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AgeRange.swift; path = Amplify/Categories/Predictions/Models/AgeRange.swift; sourceTree = "<group>"; };
 		CB681F42E3F4F8BBB0DECA56577C7232 /* AuthUpdateUserAttributesRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthUpdateUserAttributesRequest.swift; path = Amplify/Categories/Auth/Request/AuthUpdateUserAttributesRequest.swift; sourceTree = "<group>"; };
@@ -3566,7 +3566,7 @@
 				BABAB0B403C0FA58F04F9274AB97A470 /* AWSPluginsCore */,
 				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
 				2F6888A77AD2C30F7AC104B3A3B264DC /* JFPopup */,
-				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */,
+				CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */,
 				41DECBFD495F1F7A9BFC030FF46AB36A /* JRBaseKit */,
 				DCCA10F4DD7BF9CE37AACBACA963322B /* Pods-Mason */,
 				F5FA45A44C42CC2CA3A324A3E914CE19 /* SQLite.framework */,
@@ -4703,7 +4703,7 @@
 			);
 			name = "JFPopup-JFPopup";
 			productName = JFPopup;
-			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup-JFPopup */;
+			productReference = CA3E81EE3FEF1256F6AC6C8F2052D3E7 /* JFPopup.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -4760,7 +4760,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup-JFPopup in Resources */,
+				9363829ACF4FEE1C6DCC9FDB893F9916 /* JFPopup.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6120,7 +6120,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04FA76DCE70ABEA8C5CA1357FEFE8E31 /* JFPopup.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				DEVELOPMENT_TEAM = CMLZ78T85W;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -6963,7 +6965,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2DBA041F1F314B535DFEBDB443128E13 /* JFPopup.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/JFPopup";
+				DEVELOPMENT_TEAM = CMLZ78T85W;
 				IBSC_MODULE = JFPopup;
 				INFOPLIST_FILE = "Target Support Files/JFPopup/ResourceBundle-JFPopup-JFPopup-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

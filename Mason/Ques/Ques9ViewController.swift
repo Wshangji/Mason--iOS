@@ -38,23 +38,55 @@ class Ques9ViewController: UIViewController {
         }
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
+    @IBAction func jumpButton(_ sender: Any) {
         if quesList.ques9.isEmpty {
-            JFPopupView.popup.alert {[
-                       .subTitle("Please complete questions"),
-                       .showCancel(false),
-                       .confirmAction([
-                           .text("Yes"),
-                           .tapActionCallback({
-//                               JFPopupView.popup.toast(hit: "我知道了")
-                           })
-                       ])
-                   ]}
+            JFPopupView
+                .popup
+                .alert {[
+                    .subTitle("Please complete questions"),
+                    .showCancel(false),
+                    .confirmAction([
+                    .text("Yes"),
+                    .tapActionCallback({
+        //                    JFPopupView.popup.toast(hit: "我知道了")
+                        })
+                    ])
+                ]}
         } else {
-            return true
+            JFPopupView.popup.loading()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                quaryPersionEmployedbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                    (istrue) -> Void in
+                    
+                    if istrue {
+                        JFPopupView.popup.hideLoading()
+                        DispatchQueue.main.async {
+                            self.jumpQues10()
+                        }
+                    } else {
+                        JFPopupView.popup.hideLoading()
+                        DispatchQueue.main.async {
+                            self.jumpQues11()
+                        }
+                    }
+                })
+            }
         }
-        return false
     }
-
+    // 跳转问题10
+    func jumpQues10() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques10") as? Ques10ViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
+    
+    // 跳转问题11
+    func jumpQues11() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques11") as? Ques11ViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
 }
+

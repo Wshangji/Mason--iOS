@@ -97,7 +97,8 @@ class Ques12ViewController: UIViewController {
                             pro12_2: quesList.ques12_2,
                             pro12_3: quesList.ques12_3,
                             pro12_4: quesList.ques12_4,
-                            pro12_5: quesList.ques12_5
+                            pro12_5: quesList.ques12_5,
+                            updatedAt: Temporal.DateTime.now()
                         ), completion: {
                             (flag) -> Void in
 

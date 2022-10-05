@@ -1,0 +1,175 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreatePerception {
+  onCreatePerception {
+    id
+    name
+    gender
+    race
+    ethnicity
+    credits
+    employs
+    eigenstates
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdatePerception {
+  onUpdatePerception {
+    id
+    name
+    gender
+    race
+    ethnicity
+    credits
+    employs
+    eigenstates
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeletePerception {
+  onDeletePerception {
+    id
+    name
+    gender
+    race
+    ethnicity
+    credits
+    employs
+    eigenstates
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateQuestions {
+  onCreateQuestions {
+    id
+    name
+    pro1
+    pro2
+    pro3
+    pro4
+    pro5
+    pro6_1
+    pro6_2
+    pro7
+    pro8
+    pro9
+    pro10_1
+    pro10_2
+    pro10_3
+    pro10_4
+    pro11_1
+    pro11_2
+    pro11_3
+    pro11_4
+    pro11_5
+    pro12_1
+    pro12_2
+    pro12_3
+    pro12_4
+    pro12_5
+    updatedAt
+    createdAt
+    owner
+  }
+}
+subscription OnUpdateQuestions {
+  onUpdateQuestions {
+    id
+    name
+    pro1
+    pro2
+    pro3
+    pro4
+    pro5
+    pro6_1
+    pro6_2
+    pro7
+    pro8
+    pro9
+    pro10_1
+    pro10_2
+    pro10_3
+    pro10_4
+    pro11_1
+    pro11_2
+    pro11_3
+    pro11_4
+    pro11_5
+    pro12_1
+    pro12_2
+    pro12_3
+    pro12_4
+    pro12_5
+    updatedAt
+    createdAt
+    owner
+  }
+}
+subscription OnDeleteQuestions {
+  onDeleteQuestions {
+    id
+    name
+    pro1
+    pro2
+    pro3
+    pro4
+    pro5
+    pro6_1
+    pro6_2
+    pro7
+    pro8
+    pro9
+    pro10_1
+    pro10_2
+    pro10_3
+    pro10_4
+    pro11_1
+    pro11_2
+    pro11_3
+    pro11_4
+    pro11_5
+    pro12_1
+    pro12_2
+    pro12_3
+    pro12_4
+    pro12_5
+    updatedAt
+    createdAt
+    owner
+  }
+}
+subscription OnCreateUser($owner: String) {
+  onCreateUser(owner: $owner) {
+    id
+    name
+    isAgree
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateUser($owner: String) {
+  onUpdateUser(owner: $owner) {
+    id
+    name
+    isAgree
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteUser($owner: String) {
+  onDeleteUser(owner: $owner) {
+    id
+    name
+    isAgree
+    createdAt
+    updatedAt
+    owner
+  }
+}

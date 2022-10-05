@@ -56,22 +56,34 @@ class Ques8ViewController: UIViewController {
         } else {
             JFPopupView.popup.loading()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        quaryPersionEmployedbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
-                            (istrue) -> Void in
+                        quaryPersionEigenstatesbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                            (flag) -> Void in
                             
-                            if istrue {
-                                JFPopupView.popup.hideLoading()
-                                DispatchQueue.main.async {
-                                    self.jumpQues10()
-                                }
-                            } else {
+                            if flag {
                                 JFPopupView.popup.hideLoading()
                                 DispatchQueue.main.async {
                                     self.jumpQues9()
                                 }
+                            } else {
+                                quaryPersionEmployedbyID(perid: Amplify.Auth.getCurrentUser()!.userId, completion: {
+                                    (istrue) -> Void in
+                                    
+                                    if istrue {
+                                        JFPopupView.popup.hideLoading()
+                                        DispatchQueue.main.async {
+                                            self.jumpQues10()
+                                        }
+                                    } else {
+                                        JFPopupView.popup.hideLoading()
+                                        DispatchQueue.main.async {
+                                            self.jumpQues11()
+                                        }
+                                    }
+                                })
                             }
                         })
             }
+        
         }
     }
     
@@ -87,6 +99,14 @@ class Ques8ViewController: UIViewController {
     func jumpQues10() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques10") as? Ques10ViewController else {  return }
+        secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(secondVC, animated: true, completion: nil)
+    }
+    
+    // 跳转问题11
+    func jumpQues11() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(withIdentifier: "Ques11") as? Ques11ViewController else {  return }
         secondVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         self.present(secondVC, animated: true, completion: nil)
     }
